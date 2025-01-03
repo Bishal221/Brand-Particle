@@ -1,0 +1,25 @@
+{
+  "name": "brand-particle",
+  "version": "1.0.0",
+  "description": "Company main site",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bishal221/brand-particle.git"
+  },
+  "author": "Bishal Kayal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bishal221/brand-particle/issues"
+  },
+  "homepage": "https://github.com/Bishal221/brand-particle#readme",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  }
+}
