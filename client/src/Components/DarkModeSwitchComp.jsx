@@ -3,8 +3,8 @@ import { DarkModeSwitch } from "react-toggle-dark-mode";
 import { useThemeContext } from "../Context/ThemeMode"; // Import the context hook
 
 const DarkModeSwitchComp = () => {
-  const [isDarkMode, setDarkMode] = useState(false); // Default is dark mode
-  const { toggleTheme } = useThemeContext(); // Destructure theme and toggleTheme from context
+  const { theme, toggleTheme } = useThemeContext(); // Destructure theme and toggleTheme from context
+  const [isDarkMode, setDarkMode] = useState(theme === "light" ? true : false); // Default is dark mode
 
   // Toggle handler
   const toggleDarkMode = () => {

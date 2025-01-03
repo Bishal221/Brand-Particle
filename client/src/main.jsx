@@ -6,10 +6,12 @@ import routes from "./Router";
 import Header from "./Components/Header";
 
 createRoot(document.getElementById("root")).render(
-  <ThemeContextProvider>
-    <Router>
-      <Header />
-      {routes}
-    </Router>
-  </ThemeContextProvider>
+  <section className="max-w-screen overflow-hidden">
+    <ThemeContextProvider>
+      <Router>
+        <Header />
+        {routes}
+      </Router>
+    </ThemeContextProvider>
+  </section>
 );
