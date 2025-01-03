@@ -6,7 +6,7 @@ const Home = () => {
 
     return (
         <>
-            <section className="w-screen h-screen bg-">
+            <section className="w-screen h-screen dark:bg-dark-bg overflow-x-hidden">
 
             </section>
         </>

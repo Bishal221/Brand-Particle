@@ -1,10 +1,9 @@
 // Import all images
-// import AuthBudge from "./Images/Auth/user.svg"
-// import Google from "./Images/Auth/google.png"
-// import Facebook from "./Images/Auth/facebook.png"
+import BrandWhite from "./Images/brand-white.png";
 
 // Export assets
 export const Images = {
+    BrandWhite,
 };
 
 export const Videos = {
