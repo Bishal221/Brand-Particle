@@ -100,11 +100,11 @@ const Header = () => {
             </div>
           </article>
         </section>
-        <section className={`${customHeight ? "h-fit max-h-[1000px]" : "max-h-0"} transition-[max-height] duration-300 overflow-hidden`}>
+        <section className={`${customHeight ? "h-fit max-h-[1000px]" : "max-h-0"} lg:hidden transition-[max-height] duration-300 overflow-hidden`}>
           <section className=' flex items-start justify-start flex-col gap-3 pt-8 md:pt-10 pb-4'>
             <article className='flex items-center gap-3'>
-              <span className='w-2 h-2 rounded-full bg-white'></span>
-              <div className='text-white'>Have a look around</div>
+              <span className='w-2 h-2 rounded-full bg-[#26282c] dark:bg-white'></span>
+              <div className='dark:text-white'>Have a look around</div>
             </article>
             <article>
               <ul className="flex items-start justify-start flex-col gap-1">
