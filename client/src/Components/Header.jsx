@@ -13,7 +13,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setNavScroll(window.scrollY > 100);
+      setNavScroll(window.scrollY > 80);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -45,7 +45,7 @@ const Header = () => {
         className={`z-50 fixed ${menuOpen ? "menuOpen" : ""} ${navScroll
           ? "navScroll backdrop-blur-md"
           : "max-w-[1400px] w-[95%]"
-          } normal-nav left-1/2 -translate-x-1/2 top-3 lg:top-4`}
+          } normal-nav left-1/2 -translate-x-1/2 top-4`}
       >
         <section
           className={`md:px-0 ${navScroll ? "px-4" : "px-0"
