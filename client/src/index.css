@@ -81,3 +81,13 @@ body {
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent; 
 }
+
+
+.main-service-conatiner{
+	& > div{
+		&:first-child{
+			position: relative;
+			top: -180px;
+		}
+	}
+}
