@@ -91,3 +91,24 @@ body {
 		}
 	}
 }
+
+@media (max-width: 1023px){
+	.main-service-conatiner{
+		& > div{
+			&:first-child{
+				position: relative;
+				top: -100px;
+			}
+		}
+	}
+}
+@media (max-width: 640px){
+	.main-service-conatiner{
+		& > div{
+			&:first-child{
+				position: relative;
+				top: 0;
+			}
+		}
+	}
+}

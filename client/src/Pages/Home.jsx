@@ -135,43 +135,43 @@ const Home = () => {
                 </section>
             </section>
 
-            <section className="max-w-screen w-full dark:bg-dark-bg py-20 md:px-0 px-4">
+            <section className="max-w-screen w-full dark:bg-dark-bg py-20 px-4 sm:px-10 2xl:px-0">
                 <section className="container mx-auto">
-                    <div className="w-fit ml-auto mr-20 flex flex-col gap-5 mb-24">
+                    <div className="w-fit sm:ml-auto sm:mr-0 xl:mr-20 flex flex-col gap-5 mb-10 lg:mb-24">
                         <article className="flex items-center justify-start gap-4">
                             <span className="w-2 h-2 bg-white rounded-full"></span>
-                            <h4 className="text-xl text-white font-light">Our Expertise</h4>
+                            <h4 className="text-base custom-sm:text-xl sm:text-base lg:text-xl text-white font-light">Our Expertise</h4>
                         </article>
                         <article>
-                            <h2 className="text-dark-primary text-5xl font-semibold leading-[1.2] capitalize">We Are the Giants <br /> of this Field</h2>
+                            <h2 className="text-dark-primary text-3xl custom-sm:text-5xl sm:text-3xl lg:text-5xl font-semibold leading-[1.2] capitalize">We Are the Giants <br /> of this Field</h2>
                         </article>
                     </div>
-                    <section className="flex justify-start items-start gap-20 relative main-service-conatiner">
+                    <section className="flex flex-col sm:flex-row justify-start items-start gap-10 2xl:gap-20 relative main-service-conatiner">
                         {
                             ServicesArray.map((items, index) => {
                                 return (
                                     <>
-                                        <div key={index} className="w-full flex flex-col items-start justify-start gap-20">
+                                        <div key={index} className="w-full flex flex-col items-start justify-start gap-10 sm:gap-20">
                                             {items.map((item, i) => {
                                                 return (
                                                     <>
                                                         <article className="flex w-full flex-col items-start justify-start gap-5 group">
                                                             <div className="w-full relative overflow-hidden">
-                                                                <section className="absolute flex items-center justify-center gap-2 max-w-[280px] w-full transition-all duration-300 group-hover: -top-[1px] h-[45px] -right-[1px]">
+                                                                <section className="absolute flex items-center justify-center gap-2 max-w-[280px] w-full transition-all duration-300 group-hover:-top-[1px] -top-[75px] h-[45px] -right-[1px]">
                                                                     <div className="absolute top-0 left-0">
                                                                         <img src={Images.ServiceComponent} alt="" />
                                                                     </div>
                                                                     {
                                                                         item.tags.map((tag) => {
                                                                             return (
-                                                                                <p className="text-white rounded-full backdrop-blur-md text-xs py-1 px-4 uppercase bg-[rgba(110,127,153,0.11)]">
+                                                                                <p className="text-white rounded-full backdrop-blur-md text-xs py-2 px-4 uppercase bg-[rgba(110,127,153,0.11)]">
                                                                                     { tag }
                                                                                 </p>
                                                                             )
                                                                         })
                                                                     }
                                                                 </section>
-                                                                <video className="object-cover max-h-[489px] object-center rounded-3xl w-full overflow-hidden"
+                                                                <video className="object-cover max-h-[350px] lg:max-h-[489px] object-center rounded-3xl w-full overflow-hidden"
                                                                     autoPlay
                                                                     muted
                                                                     loop
@@ -179,10 +179,10 @@ const Home = () => {
                                                                 </video>
                                                             </div>
                                                             <div className="text-white w-full flex flex-col items-start justify-start gap-2">
-                                                                <h1 className="text-4xl font-semibold">{ item.name }</h1>
-                                                                <div className="flex items-center justify-start gap-2">
-                                                                    <span className="w-2 h-2 rounded-full bg-white block"></span>
-                                                                    <p className="font-light text-sm w-[95%]">{ item.description }</p>
+                                                                <h1 className="text-2xl custom-sm:text-4xl sm:text-2xl lg:text-4xl font-semibold">{ item.name }</h1>
+                                                                <div className="flex items-start lg:items-center justify-start gap-2">
+                                                                    <span className="w-2 h-2 rounded-full bg-white block mt-2"></span>
+                                                                    <p className="font-light text-sm sm:text-xs lg:text-sm w-[95%]">{ item.description }</p>
                                                                 </div>
                                                             </div>
                                                         </article>
