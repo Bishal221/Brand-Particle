@@ -202,16 +202,16 @@ const Home = () => {
             <section className="max-w-screen w-full dark:bg-dark-bg py-20 px-4 md:px-0 z-[1]">
                 <section className="relative container mx-auto flex flex-col items-center justify-center">
                     <article>
-                        <h1 className="portfolio-min-text leading-[1] text-[20rem] xl:text-[25rem] font-bold">100+</h1>
+                        <h1 className="portfolio-min-text leading-[1] text-9xl custom-sm:text-[12rem] sm:text-[15rem] md:text-[20rem] xl:text-[25rem] font-bold">100+</h1>
                     </article>
-                    <article className="relative -top-[90px] flex items-center justify-center flex-col gap-8 max-w-[800px] xl:max-w-[900px] w-full">
-                        <h1 className="text-center text-7xl xl:text-8xl text-dark-primary font-semibold">We are <span className="relative z-[1] before:absolute before:content-[''] before:bg-[rgba(255,255,255,0.1)] before:w-full before:h-5 before:bottom-4 before:-z-[1]">the MVPs</span> of this game.</h1>
-                        <h3 className="text-4xl xl:text-5xl font-semibold text-[rgba(255,255,255,63%)] text-center">Game-Changers & Always Winning</h3>
-                        <p className="text-center text-white text-xl xl:text-2xl my-3 xl:my-5">We have helped 100+ biz owners like you transform their businesses with our advanced funnel strategies that convert like crazy.</p>
-                        <div className="flex items-center justify-between gap-10 w-full">
-                            <article className="flex items-center justify-center gap-2 text-white text-lg xl:text-xl"><span className="text-xl xl:text-2xl"><FaCheckCircle /></span>Advanced Funnels</article>
-                            <article className="flex items-center justify-center gap-2 text-white text-lg xl:text-xl"><span className="text-xl xl:text-2xl"><FaCheckCircle /></span>Smart Ads</article>
-                            <article className="flex items-center justify-center gap-2 text-white text-lg xl:text-xl"><span className="text-xl xl:text-2xl"><FaCheckCircle /></span>High-converting Webinars</article>
+                    <article className="relative -top-[40px] custom-sm:-top-[60px] sm:-top-[80px] md:-top-[90px] flex items-center justify-center flex-col gap-4 sm:gap-6 md:gap-8 max-w-[450px] sm:max-w-[500px] md:max-w-[800px] xl:max-w-[900px] w-full">
+                        <h1 className="text-center text-3xl custom-sm:text-4xl sm:text-6xl md:text-7xl xl:text-8xl text-dark-primary font-semibold">We are <span className="relative z-[1] before:absolute before:content-[''] before:bg-[rgba(255,255,255,0.1)] before:w-full before:bottom-2 before:h-3 md:before:h-5 md:before:bottom-4 before:-z-[1]">the MVPs</span> of this game.</h1>
+                        <h3 className="text-lg custom-sm:text-xl sm:text-2xl md:text-4xl xl:text-5xl font-semibold text-[rgba(255,255,255,63%)] text-center">Game-Changers & Always Winning</h3>
+                        <p className="text-center text-white text-sm sm:text-base md:text-xl xl:text-2xl md:my-3 xl:my-5">We have helped 100+ biz owners like you transform their businesses with our advanced funnel strategies that convert like crazy.</p>
+                        <div className="flex items-center justify-between flex-col custom-sm:flex-row gap-5 custom-sm:gap-2 sm:gap-3 md:gap-10 w-full">
+                            <article className="flex items-center justify-center gap-2 text-white text-xs sm:text-sm md:text-lg xl:text-xl"><span className="text-base md:text-xl xl:text-2xl"><FaCheckCircle /></span>Advanced Funnels</article>
+                            <article className="flex items-center justify-center gap-2 text-white text-xs sm:text-sm md:text-lg xl:text-xl"><span className="text-base md:text-xl xl:text-2xl"><FaCheckCircle /></span>Smart Ads</article>
+                            <article className="flex items-center justify-center gap-2 text-white text-xs sm:text-sm md:text-lg xl:text-xl"><span className="text-base md:text-xl xl:text-2xl"><FaCheckCircle /></span>High-converting Webinars</article>
                         </div>
                     </article>
                 </section>
