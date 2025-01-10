@@ -9,28 +9,28 @@ const Home = () => {
             {
                 id: 1,
                 videoPath: Videos.mainLeftVideo,
-                tags: ["Node-js", "PHP", "Python"],
+                tags: ["Node-js", "PHP"],
                 name: "Website Development",
                 description: "We don’t just build websites; we create digital experiences that your visitors will never forget.",
             },
             {
                 id: 2,
                 videoPath: Videos.mainLeftVideo,
-                tags: ["Java", "React Native", "Flutter"],
+                tags: ["Java", "React Native"],
                 name: "App Development",
                 description: "We make apps that are more than icons on the screen. We ensure that your app delivers top-tier performance while looking more stunning than your competitors.",
             },
             {
                 id: 3,
                 videoPath: Videos.mainLeftVideo,
-                tags: ["Figma", "UI/UX", "Branding"],
+                tags: ["Figma", "UI/UX"],
                 name: "Creative Design",
                 description: "From logos to visuals, we create designs that don’t just speak, but shout out your brand’s vision",
             },
             {
                 id: 4,
                 videoPath: Videos.mainLeftVideo,
-                tags: ["Consistency", "Analytics", "Engagement"],
+                tags: ["Consistency", "Analytics"],
                 name: "Social Media Management",
                 description: "We create posts that vibe with your followers and help you build an online presence that can skyrocket your revenue.",
             },
@@ -39,33 +39,34 @@ const Home = () => {
             {
                 id: 1,
                 videoPath: Videos.mainLeftVideo,
-                tags: ["Keywords", "Backlinks", "Ranking"],
+                tags: ["Keywords", "Backlinks"],
                 name: "Search Engine Optimization",
                 description: "We help you rank above your competitors with SEO strategies that dominate search results.",
             },
             {
                 id: 2,
                 videoPath: Videos.mainLeftVideo,
-                tags: ["Planning", "Targeting", "Execution"],
+                tags: ["Planning", "Targeting"],
                 name: "Strategic Marketing",
                 description: "We craft killer marketing plans that help your brand standout in this crowded digital world - ensuring more engagement & increased ROI.",
             },
             {
                 id: 3,
                 videoPath: Videos.mainLeftVideo,
-                tags: ["Cutting", "Effects", "Rendering"],
+                tags: ["Cutting", "Effects"],
                 name: "Professional Video Editing",
                 description: "With expert editing & strategic storytelling we make your videos standout from the millions of videos being posted on the internet every single day.",
             },
             {
                 id: 4,
                 videoPath: Videos.mainLeftVideo,
-                tags: ["Automation", "Funnels", "Integration"],
+                tags: ["Automation", "Funnels"],
                 name: "Advanced Webinar Funnel Setup",
                 description: "We design advanced funnels that guarantee more enrollments for your webinars and ensure more sales.",
             },
         ],
     ];
+    
 
 
     return (
@@ -156,10 +157,19 @@ const Home = () => {
                                                     <>
                                                         <article className="flex w-full flex-col items-start justify-start gap-5 group">
                                                             <div className="w-full relative overflow-hidden">
-                                                                <section className="absolute max-w-[250px] w-full transition-all duration-300 group-hover: -top-[1px]  -right-[1px]">
+                                                                <section className="absolute flex items-center justify-center gap-2 max-w-[280px] w-full transition-all duration-300 group-hover: -top-[1px] h-[45px] -right-[1px]">
                                                                     <div className="absolute top-0 left-0">
                                                                         <img src={Images.ServiceComponent} alt="" />
                                                                     </div>
+                                                                    {
+                                                                        item.tags.map((tag) => {
+                                                                            return (
+                                                                                <p className="text-white rounded-full backdrop-blur-md text-xs py-1 px-4 uppercase bg-[rgba(110,127,153,0.11)]">
+                                                                                    { tag }
+                                                                                </p>
+                                                                            )
+                                                                        })
+                                                                    }
                                                                 </section>
                                                                 <video className="object-cover max-h-[489px] object-center rounded-3xl w-full overflow-hidden"
                                                                     autoPlay
