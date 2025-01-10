@@ -199,19 +199,19 @@ const Home = () => {
                 </section>
             </section>
 
-            <section className="max-w-screen w-full dark:bg-dark-bg py-20 px-4 md:px-0">
-                <section className="container mx-auto border border-red-500 flex flex-col items-center justify-center">
+            <section className="max-w-screen w-full dark:bg-dark-bg py-20 px-4 md:px-0 z-[1]">
+                <section className="relative container mx-auto flex flex-col items-center justify-center">
                     <article>
-                        <h1 className="portfolio-min-text leading-[1] text-[25rem] font-bold">90+</h1>
+                        <h1 className="portfolio-min-text leading-[1] text-[25rem] font-bold">100+</h1>
                     </article>
-                    <article className="">
-                        <h1>We are the MVPs of this game</h1>
-                        <h3>Game-Changers & Always Winning</h3>
-                        <p>We have helped 100+ biz owners like you transform their businesses with our advanced funnel strategies that convert like crazy.</p>
-                        <div>
-                            <article><span><FaCheckCircle /></span>Advanced Funnels</article>
-                            <article><span><FaCheckCircle /></span>Smart Ads</article>
-                            <article><span><FaCheckCircle /></span>High-converting Webinars</article>
+                    <article className="relative -top-[90px] flex items-center justify-center flex-col gap-8 max-w-[900px] w-full">
+                        <h1 className="text-center text-8xl text-dark-primary font-semibold  ">We are <span className="relative z-[1] before:absolute before:content-[''] before:bg-[rgba(255,255,255,0.1)] before:w-full before:h-5 before:bottom-4 before:-z-[1]">the MVPs</span> of this game.</h1>
+                        <h3 className="text-5xl font-semibold text-[rgba(255,255,255,63%)] text-center">Game-Changers & Always Winning</h3>
+                        <p className="text-center text-white text-2xl my-5">We have helped 100+ biz owners like you transform their businesses with our advanced funnel strategies that convert like crazy.</p>
+                        <div className="flex items-center justify-between gap-10 w-full">
+                            <article className="flex items-center justify-center gap-2 text-white text-xl"><span className="text-2xl"><FaCheckCircle /></span>Advanced Funnels</article>
+                            <article className="flex items-center justify-center gap-2 text-white text-xl"><span className="text-2xl"><FaCheckCircle /></span>Smart Ads</article>
+                            <article className="flex items-center justify-center gap-2 text-white text-xl"><span className="text-2xl"><FaCheckCircle /></span>High-converting Webinars</article>
                         </div>
                     </article>
                 </section>
