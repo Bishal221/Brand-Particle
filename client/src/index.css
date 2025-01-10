@@ -112,3 +112,12 @@ body {
 		}
 	}
 }
+
+.portfolio-min-text{
+    color: #c9ff51; 
+    background-image: linear-gradient(180deg, #c9ff51 0%, #ffffff3c 75%); 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+	opacity: 65%;
+}

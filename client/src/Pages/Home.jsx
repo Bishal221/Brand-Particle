@@ -1,6 +1,7 @@
 import React from "react";
 import { Images, Videos } from "../assets/Index";
 import { Link } from "react-router-dom";
+import { FaCheckCircle } from "react-icons/fa";
 
 const Home = () => {
 
@@ -195,6 +196,24 @@ const Home = () => {
                             })
                         }
                     </section>
+                </section>
+            </section>
+
+            <section className="max-w-screen w-full dark:bg-dark-bg py-20 px-4 md:px-0">
+                <section className="container mx-auto border border-red-500 flex flex-col items-center justify-center">
+                    <article>
+                        <h1 className="portfolio-min-text leading-[1] text-[25rem] font-bold">90+</h1>
+                    </article>
+                    <article className="">
+                        <h1>We are the MVPs of this game</h1>
+                        <h3>Game-Changers & Always Winning</h3>
+                        <p>We have helped 100+ biz owners like you transform their businesses with our advanced funnel strategies that convert like crazy.</p>
+                        <div>
+                            <article><span><FaCheckCircle /></span>Advanced Funnels</article>
+                            <article><span><FaCheckCircle /></span>Smart Ads</article>
+                            <article><span><FaCheckCircle /></span>High-converting Webinars</article>
+                        </div>
+                    </article>
                 </section>
             </section>
         </>
