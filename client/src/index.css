@@ -45,18 +45,21 @@ body {
 		max-width: 360px;
 	}
 }
+
 @media (min-width: 640px) {
 	.navScroll {
 		max-width: 560px;
 		width: 100%;
 	}
 }
+
 @media (min-width: 768px) {
 	.navScroll {
 		padding-left: 1.75rem;
 		padding-right: 1rem;
 	}
 }
+
 @media (min-width: 1024px) {
 	.navScroll {
 		max-width: 1000px;
@@ -69,43 +72,45 @@ body {
 	width: 90%;
 	/* background: #26282ccc !important; */
 }
-.menuOpen.navScroll > section {
+
+.menuOpen.navScroll>section {
 	padding-left: 0 !important;
 	padding-right: 0 !important;
 }
 
-.about-us-min-text{
-    color: #c9ff51; 
-    background-image: linear-gradient(180deg, #c9ff51 58%, #ffffff00 75%); 
-    background-clip: text; 
-    -webkit-background-clip: text; 
-    -webkit-text-fill-color: transparent; 
+.about-us-min-text {
+	color: #c9ff51;
+	background-image: linear-gradient(180deg, #c9ff51 58%, #ffffff00 75%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 
-.main-service-conatiner{
-	& > div{
-		&:first-child{
+.main-service-conatiner {
+	&>div {
+		&:first-child {
 			position: relative;
 			top: -180px;
 		}
 	}
 }
 
-@media (max-width: 1023px){
-	.main-service-conatiner{
-		& > div{
-			&:first-child{
+@media (max-width: 1023px) {
+	.main-service-conatiner {
+		&>div {
+			&:first-child {
 				position: relative;
 				top: -100px;
 			}
 		}
 	}
 }
-@media (max-width: 640px){
-	.main-service-conatiner{
-		& > div{
-			&:first-child{
+
+@media (max-width: 640px) {
+	.main-service-conatiner {
+		&>div {
+			&:first-child {
 				position: relative;
 				top: 0;
 			}
@@ -113,11 +118,26 @@ body {
 	}
 }
 
-.portfolio-min-text{
-    color: #c9ff51; 
-    background-image: linear-gradient(180deg, #c9ff51 0%, #ffffff3c 75%); 
-    background-clip: text; 
-    -webkit-background-clip: text; 
-    -webkit-text-fill-color: transparent; 
+.portfolio-min-text {
+	color: #c9ff51;
+	background-image: linear-gradient(180deg, #c9ff51 0%, #ffffff3c 75%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 	opacity: 65%;
+}
+
+.processFlow-main-text {
+	background: #CFFE71;
+	background: linear-gradient(to right, #CFFE71 0%, #8AB49B 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.processFlow-main-container {
+	background: rgb(208, 255, 113);
+	background: -moz-linear-gradient(180deg, rgba(208, 255, 113, 0.83) 9%, rgba(208, 255, 113, 0.07) 100%);
+	background: -webkit-linear-gradient(180deg, rgba(208, 255, 113, 0.83) 9%, rgba(208, 255, 113, 0.07) 100%);
+	background: linear-gradient(180deg, rgba(208, 255, 113, 0.83) 9%, rgba(208, 255, 113, 0.07) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d0ff71", endColorstr="#d0ff71", GradientType=1);
 }

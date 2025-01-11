@@ -2,6 +2,7 @@ import React from "react";
 import { Images, Videos } from "../assets/Index";
 import { Link } from "react-router-dom";
 import { FaCheckCircle } from "react-icons/fa";
+import { FaPlay } from "react-icons/fa6";
 
 const Home = () => {
 
@@ -218,27 +219,32 @@ const Home = () => {
             </section>
 
             <section className="max-w-screen w-full dark:bg-dark-bg py-20 px-4 md:px-0">
-                <section className="container mx-auto border border-red-500">
-                    <article className="flex items-center justify-between gap-10">
+                <div className="container mx-auto flex flex-col items-start justify-start gap-16">
+                    <section className="flex items-center justify-between gap-10 w-full">
                         <article>
-                            <h1>How</h1>
-                            <h1>We Process</h1>
+                            <h1 className="text-7xl text-white font-bold">How</h1>
+                            <h1 className="processFlow-main-text text-7xl font-bold relative z-[1] before:absolute before:content-[''] before:bg-[#D0FF71] before:opacity-[37%] before:w-full before:bottom-1 before:h-3 before:-z-[1]">We Process</h1>
                         </article>
-                        <article>
-                            <div>
-                                <span></span>
-                                <h3>See How It Works</h3>
+                        <article className="max-w-[500px] flex items-start justify-start flex-col gap-4">
+                            <div className="flex items-center justify-start gap-4">
+                                <span className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-[#CCFB73] to-[#8EB998]">
+                                    <FaPlay className="text-white text-sm" />
+                                </span>
+                                <h3 className="text-white">See How It Works</h3>
                             </div>
                             <div>
-                                <p>Say goodbye to old fashioned theme options! Hub
-                                    employs a live customizer so you can adjust global
-                                    theme options and see design changes in real-time
-                                    thanks to the next generation live customizer.</p>
+                                <p className="text-white"><span className="text-dark-primary">Say goodbye to old fashioned ways to get clients or to sell your courses.</span>
+                                This ‘Master Blueprint’ of ours will help you 10X your income and build your 7-figure online biz that prints money on automation.</p>
                             </div>
                         </article>
-                    </article>
-                    <article></article>
-                </section>
+                    </section>
+                    <section className="processFlow-main-container w-full h-5 rounded-lg min-h-[700px] flex items-center justify-between gap-10 p-12">
+                        <article>
+                            <h1 className="text-[#1A1A1A] text-6xl max-w-[500px] font-semibold">Know Our Killer Game-Plan.</h1>
+                        </article>
+                        <article></article>
+                    </section>
+                </div>
             </section>
         </>
     );
