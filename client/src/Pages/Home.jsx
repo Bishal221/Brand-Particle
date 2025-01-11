@@ -93,6 +93,46 @@ const Home = () => {
             heading: "Seamless Webinar Execution",
             content: "This is where you earn your cash. From registration to follow-ups, we make sure your webinars deliver the success for which you trusted us. <br/> <br/> Don’t know how to pitch? Don’t worry — our sales sharks will be there to guide you!",
         },
+    ];
+
+
+    const SmallService = [
+        {
+            id: 1,
+            img: Images.WebDev,
+            tittle: "Website Development",
+            caption: "Communicating Vision",
+        },
+        {
+            id: 2,
+            img: Images.AppDev,
+            tittle: "App Development",
+            caption: "Seamless Connectivity",
+        },
+        {
+            id: 3,
+            img: Images.Design,
+            tittle: "Creative Design",
+            caption: "Designing Success",
+        },
+        {
+            id: 4,
+            img: Images.Social,
+            tittle: "Social Media Management",
+            caption: "Fueling Engagement",
+        },
+        {
+            id: 5,
+            img: Images.Marketing,
+            tittle: "Strategic Marketing",
+            caption: "Planning Futures",
+        },
+        {
+            id: 6,
+            img: Images.WebinarFunnel,
+            tittle: "Advanced Webinar <br /> Funnel Setup",
+            caption: "Empowering Growth",
+        },
     ]
 
 
@@ -299,6 +339,38 @@ const Home = () => {
                                 src={Videos.mainLeftVideo}>
                             </video>
                         </article>
+                    </section>
+                </div>
+            </section>
+
+
+
+            <section className="max-w-screen w-full dark:bg-dark-bg py-20 px-4">
+                <div className="container mx-auto">
+                    <section className="flex items-end justify-between gap-10">
+                        <article className="w-1/2">
+                            <h1 className="text-6xl font-bold text-dark-primary">Relax, We <br /> Manage <span className="relative z-[1] before:absolute before:content-[''] before:bg-[#D0FF71] before:opacity-[20%] before:w-full before:bottom-1 sm:before:bottom-0 xl:before:bottom-2 before:h-3 sm:before:h-2 md:before:h-3 before:-z-[1]">Everything!</span></h1>
+                        </article>
+                        <article className="max-w-[500px] w-full">
+                            <p className="text-white text-xl">Our team of digital warriors will do everything for you so that you can focus on what you do the best — Running your business.</p>
+                        </article>
+                    </section>
+                    <section className="mt-32 flex items-center justify-evenly gap-5 small-service-container relative">
+                        {SmallService.map((service, index) => {
+                            return (
+                                <>
+                                    <article key={index} className="flex items-center justify-center gap-3 flex-col">
+                                        <div className="flex items-center justify-center w-28 h-28 rounded-full bg-white">
+                                            <img className="w-[60px]" src={service.img} alt="" />
+                                        </div>
+                                        <div className="flex items-center justify-center gap-1 flex-col">
+                                            <h1 className="text-lg font-semibold text-white text-center" dangerouslySetInnerHTML={{ __html: service.tittle }}></h1>
+                                            <p className="py-1 px-2 rounded-full text-xs bg-dark-primary text-center font-medium">{service.caption}</p>
+                                        </div>
+                                    </article>
+                                </>
+                            )
+                        })}
                     </section>
                 </div>
             </section>

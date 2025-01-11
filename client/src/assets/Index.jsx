@@ -6,6 +6,12 @@ import VideoComponentNew from "./Images/Component-3.png";
 import ServiceComponent from "./Images/service-component.png";
 import RoundImg from "./Images/round-img.png";
 import ProcessFlowMainimg from "./Images/ProcessFlowMainimg.png";
+import WebDev from "./Images/WebDev.png";
+import AppDev from "./Images/AppDev.png";
+import WebinarFunnel from "./Images/WebinarFunnel.png";
+import Design from "./Images/Design.png";
+import Social from "./Images/Social.png";
+import Marketing from "./Images/Marketing.png";
 import AboutUsElement1 from "./Images/about-us-element1.png";
 import mainLeftVideo from "./Videos/showreel-2024-portrait_cropped.mp4";
 
@@ -19,6 +25,12 @@ export const Images = {
     AboutUsElement1,
     ServiceComponent,
     ProcessFlowMainimg,
+    WebDev,
+    AppDev,
+    WebinarFunnel,
+    Design,
+    Social,
+    Marketing,
 };
 
 export const Videos = {
