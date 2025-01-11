@@ -148,3 +148,13 @@ body {
 		right: -40px !important;
 	}
 }
+@media (max-width: 1024px) {
+	.processOverlap-video{
+		right: -20px !important;
+	}
+}
+@media (min-width: 767px) {
+	.processOverlap-video{
+		right: 0 !important;
+	}
+}

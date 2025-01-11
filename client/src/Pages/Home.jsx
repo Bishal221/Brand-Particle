@@ -246,28 +246,28 @@ const Home = () => {
 
             <section className="max-w-screen w-full dark:bg-dark-bg py-20 px-4">
                 <div className="container mx-auto flex flex-col items-start justify-start gap-10 xl:gap-16">
-                    <section className="flex items-center justify-between gap-5 lg:gap-10 w-full">
-                        <article>
-                            <h1 className="text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-white font-bold">How</h1>
-                            <h1 className="processFlow-main-text text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold relative z-[1] before:absolute before:content-[''] before:bg-[#D0FF71] before:opacity-[37%] before:w-full before:bottom-0 xl:before:bottom-1 before:h-3 before:-z-[1]">We Process.</h1>
+                    <section className="flex sm:items-center justify-between flex-col sm:flex-row gap-8 custom-sm:gap-10 sm:gap-5 lg:gap-10 w-full">
+                        <article className="w-fit sm:w-1/2 md:w-fit">
+                            <h1 className="text-5xl custom-sm:text-7xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-white font-bold">How</h1>
+                            <h1 className="processFlow-main-text text-5xl custom-sm:text-7xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold relative z-[1] before:absolute before:content-[''] before:bg-[#D0FF71] before:opacity-[37%] before:w-full before:bottom-1 sm:before:bottom-0 xl:before:bottom-1 before:h-3 sm:before:h-2 md:before:h-3 before:-z-[1]">We Process.</h1>
                         </article>
-                        <article className="w-1/2 lg:max-w-[500px] flex items-start justify-start flex-col gap-4">
+                        <article className="w-full sm:w-1/2 lg:max-w-[500px] flex items-start justify-start flex-col gap-2 md:gap-4">
                             <div className="flex items-center justify-start gap-4">
-                                <span className="flex items-center justify-center w-10 h-10 xl:w-12 xl:h-12 rounded-full bg-gradient-to-r from-[#CCFB73] to-[#8EB998]">
-                                    <FaPlay className="text-white text-sm" />
+                                <span className="flex items-center justify-center w-10 h-10 custom-sm:w-12 custom-sm:h-12 sm:h-8 sm:w-8 md:w-10 md:h-10 xl:w-12 xl:h-12 rounded-full bg-gradient-to-r from-[#CCFB73] to-[#8EB998]">
+                                    <FaPlay className="text-white text-sm custom-sm:text-base sm:text-xs md:text-sm" />
                                 </span>
-                                <h3 className="text-white">See How It Works</h3>
+                                <h3 className="text-white text-xl custom-sm:text-2xl sm:text-base">See How It Works</h3>
                             </div>
                             <div>
-                                <p className="text-white text-sm xl:text-base"><span className="text-dark-primary">Say goodbye to old fashioned ways to get clients or to sell your courses.</span>
+                                <p className="text-white text-base custom-sm:text-lg sm:text-xs md:text-sm xl:text-base"><span className="text-dark-primary">Say goodbye to old fashioned ways to get clients or to sell your courses.</span>
                                     This ‘Master Blueprint’ of ours will help you 10X your income and build your 7-figure online biz that prints money on automation.</p>
                             </div>
                         </article>
                     </section>
-                    <section className="processFlow-main-container w-full rounded-lg min-h-[700px] h-auto flex items-start justify-between gap-5 lg:gap-10 p-10 lg:p-16">
+                    <section className="processFlow-main-container w-full rounded-lg min-h-[450px] md:min-h-[500px] lg:min-h-[700px] h-auto flex items-start justify-between flex-col sm:flex-row gap-5 lg:gap-10 p-8 custom-sm:p-10 sm:p-6 md:p-10 lg:p-16">
                         <article className="w-full">
-                            <h1 className="text-[#1A1A1A] text-5xl xl:text-6xl max-w-[500px] font-bold">Know Our Killer Game-Plan.</h1>
-                            <section className="mt-10 flex items-start justify-start flex-col gap-8">
+                            <h1 className="text-[#1A1A1A] text-4xl custom-sm:text-5xl sm:text-3xl lg:text-5xl xl:text-6xl max-w-[500px] font-bold">Know Our Killer Game-Plan.</h1>
+                            <section className="mt-10 sm:mt-5 lg:mt-10 flex items-start justify-start flex-col gap-8">
                                 {
                                     ProcessFlowFAQ.map((faq, index) => {
                                         return (
@@ -275,12 +275,12 @@ const Home = () => {
                                                 <article key={index}>
                                                     <button onClick={() => {
                                                         setProcessFlowFAQ(faq.id)
-                                                    }} className="flex items-center justify-start gap-5">
-                                                        <span className={`${processFlowFAQ === faq.id ? "rotate-0" : "rotate-45"} text-white text-xl transition-all duration-300`}><IoMdClose /></span>
-                                                        <p className="text-white text-lg font-semibold">{faq.heading}</p>
+                                                    }} className="flex custom-sm:items-center justify-start gap-3 custom-sm:gap-5 sm:gap-3 lg:gap-5">
+                                                        <span className={`${processFlowFAQ === faq.id ? "rotate-0" : "rotate-45"} text-white custom-sm:text-xl sm:text-lg lg:text-xl transition-all mt-1 custom-sm:mt-0 duration-300`}><IoMdClose /></span>
+                                                        <p className="text-white text-left text-lg custom-sm:text-xl sm:text-base lg:text-lg font-semibold">{faq.heading}</p>
                                                     </button>
                                                     <div className={`${processFlowFAQ === faq.id ? "max-h-[300px] h-auto transition-[max-height] duration-300" : "max-h-0 h-auto transition-[max-height] duration-300"} overflow-hidden `}>
-                                                        <p className="pt-4 pl-10 text-white font-light" dangerouslySetInnerHTML={{ __html: faq.content }}></p>
+                                                        <p className="pt-3 pl-8 custom-sm:pl-10 sm:pl-7 lg:pt-4 lg:pl-10 text-base sm:text-xs md:text-sm lg:text-base text-white font-light" dangerouslySetInnerHTML={{ __html: faq.content }}></p>
                                                     </div>
                                                 </article>
                                             </>
@@ -290,9 +290,9 @@ const Home = () => {
                             </section>
                         </article>
                         <article className="w-full relative flex items-center justify-start xl:justify-end">
-                            <img className="w-full max-w-[90%] max-h-[450px] object-contain h-auto" src={Images.ProcessFlowMainimg} alt="" />
+                            <img className="md:block hidden w-full max-w-[90%] max-h-[450px] object-contain h-auto" src={Images.ProcessFlowMainimg} alt="" />
                             <video
-                                className="processOverlap-video absolute top-10 -right-20 object-cover object-center rounded-3xl max-w-[400px] w-full max-h-[450px] overflow-hidden"
+                                className="processOverlap-video md:absolute md:top-10 -right-20 object-cover object-center rounded-xl sm:rounded-3xl max-w-full sm:max-w-[350px] lg:max-w-[400px] w-full max-h-[400px] sm:max-h-full md:max-h-[350px] lg:max-h-[450px] overflow-hidden"
                                 autoPlay
                                 muted
                                 loop
