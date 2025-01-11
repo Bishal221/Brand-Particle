@@ -125,6 +125,7 @@ body {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	opacity: 65%;
+	animation: rotateGradient 4s linear infinite; /* Define the animation */
 }
 
 .processFlow-main-text {
@@ -132,6 +133,7 @@ body {
 	background: linear-gradient(to right, #CFFE71 0%, #8AB49B 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+	animation: rotateGradient 1s linear infinite; /* Define the animation */
 }
 
 .processFlow-main-container {
@@ -139,5 +141,10 @@ body {
 	background: -moz-linear-gradient(180deg, rgba(208, 255, 113, 0.83) 9%, rgba(208, 255, 113, 0.07) 100%);
 	background: -webkit-linear-gradient(180deg, rgba(208, 255, 113, 0.83) 9%, rgba(208, 255, 113, 0.07) 100%);
 	background: linear-gradient(180deg, rgba(208, 255, 113, 0.83) 9%, rgba(208, 255, 113, 0.07) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d0ff71", endColorstr="#d0ff71", GradientType=1);
+}
+
+@media (max-width:1460px) {
+	.processOverlap-video{
+		right: -40px !important;
+	}
 }

@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Images, Videos } from "../assets/Index";
 import { Link } from "react-router-dom";
 import { FaCheckCircle } from "react-icons/fa";
 import { FaPlay } from "react-icons/fa6";
+import { IoMdClose } from "react-icons/io";
 
 const Home = () => {
+
+    const [processFlowFAQ, setProcessFlowFAQ] = useState(1);
 
     const ServicesArray = [
         [
@@ -68,6 +71,29 @@ const Home = () => {
             },
         ],
     ];
+
+    const ProcessFlowFAQ = [
+        {
+            id: 1,
+            heading: "Foolproof Strategic Planning",
+            content: "This is where we dive deep into your business and understand its core message. We map out the journey of your ideal customer and craft a laser-focused strategy that cuts through the noise.",
+        },
+        {
+            id: 2,
+            heading: "High-Convering Funnel Setup",
+            content: "This is where we build the funnel that will allow you to take the back-seat and relax while it will continue to bring results for you on automation. <br/> <br/> Our copy kings will provide you the scripts for your video ads and our editing wizards will edit your video ads to get you all covered.",
+        },
+        {
+            id: 3,
+            heading: "Smart Ads Placements",
+            content: "This is where we place your ads all over social media (Facebook & Instagram) targeting your potential customers to catch more eyeballs and get more enrollments for your webinars.",
+        },
+        {
+            id: 4,
+            heading: "Seamless Webinar Execution",
+            content: "This is where you earn your cash. From registration to follow-ups, we make sure your webinars deliver the success for which you trusted us. <br/> <br/> Don’t know how to pitch? Don’t worry — our sales sharks will be there to guide you!",
+        },
+    ]
 
 
 
@@ -218,31 +244,61 @@ const Home = () => {
                 </section>
             </section>
 
-            <section className="max-w-screen w-full dark:bg-dark-bg py-20 px-4 md:px-0">
-                <div className="container mx-auto flex flex-col items-start justify-start gap-16">
-                    <section className="flex items-center justify-between gap-10 w-full">
+            <section className="max-w-screen w-full dark:bg-dark-bg py-20 px-4">
+                <div className="container mx-auto flex flex-col items-start justify-start gap-10 xl:gap-16">
+                    <section className="flex items-center justify-between gap-5 lg:gap-10 w-full">
                         <article>
-                            <h1 className="text-7xl text-white font-bold">How</h1>
-                            <h1 className="processFlow-main-text text-7xl font-bold relative z-[1] before:absolute before:content-[''] before:bg-[#D0FF71] before:opacity-[37%] before:w-full before:bottom-1 before:h-3 before:-z-[1]">We Process</h1>
+                            <h1 className="text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-white font-bold">How</h1>
+                            <h1 className="processFlow-main-text text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold relative z-[1] before:absolute before:content-[''] before:bg-[#D0FF71] before:opacity-[37%] before:w-full before:bottom-0 xl:before:bottom-1 before:h-3 before:-z-[1]">We Process.</h1>
                         </article>
-                        <article className="max-w-[500px] flex items-start justify-start flex-col gap-4">
+                        <article className="w-1/2 lg:max-w-[500px] flex items-start justify-start flex-col gap-4">
                             <div className="flex items-center justify-start gap-4">
-                                <span className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-[#CCFB73] to-[#8EB998]">
+                                <span className="flex items-center justify-center w-10 h-10 xl:w-12 xl:h-12 rounded-full bg-gradient-to-r from-[#CCFB73] to-[#8EB998]">
                                     <FaPlay className="text-white text-sm" />
                                 </span>
                                 <h3 className="text-white">See How It Works</h3>
                             </div>
                             <div>
-                                <p className="text-white"><span className="text-dark-primary">Say goodbye to old fashioned ways to get clients or to sell your courses.</span>
-                                This ‘Master Blueprint’ of ours will help you 10X your income and build your 7-figure online biz that prints money on automation.</p>
+                                <p className="text-white text-sm xl:text-base"><span className="text-dark-primary">Say goodbye to old fashioned ways to get clients or to sell your courses.</span>
+                                    This ‘Master Blueprint’ of ours will help you 10X your income and build your 7-figure online biz that prints money on automation.</p>
                             </div>
                         </article>
                     </section>
-                    <section className="processFlow-main-container w-full h-5 rounded-lg min-h-[700px] flex items-center justify-between gap-10 p-12">
-                        <article>
-                            <h1 className="text-[#1A1A1A] text-6xl max-w-[500px] font-semibold">Know Our Killer Game-Plan.</h1>
+                    <section className="processFlow-main-container w-full rounded-lg min-h-[700px] h-auto flex items-start justify-between gap-5 lg:gap-10 p-10 lg:p-16">
+                        <article className="w-full">
+                            <h1 className="text-[#1A1A1A] text-5xl xl:text-6xl max-w-[500px] font-bold">Know Our Killer Game-Plan.</h1>
+                            <section className="mt-10 flex items-start justify-start flex-col gap-8">
+                                {
+                                    ProcessFlowFAQ.map((faq, index) => {
+                                        return (
+                                            <>
+                                                <article key={index}>
+                                                    <button onClick={() => {
+                                                        setProcessFlowFAQ(faq.id)
+                                                    }} className="flex items-center justify-start gap-5">
+                                                        <span className={`${processFlowFAQ === faq.id ? "rotate-0" : "rotate-45"} text-white text-xl transition-all duration-300`}><IoMdClose /></span>
+                                                        <p className="text-white text-lg font-semibold">{faq.heading}</p>
+                                                    </button>
+                                                    <div className={`${processFlowFAQ === faq.id ? "max-h-[300px] h-auto transition-[max-height] duration-300" : "max-h-0 h-auto transition-[max-height] duration-300"} overflow-hidden `}>
+                                                        <p className="pt-4 pl-10 text-white font-light" dangerouslySetInnerHTML={{ __html: faq.content }}></p>
+                                                    </div>
+                                                </article>
+                                            </>
+                                        )
+                                    })
+                                }
+                            </section>
                         </article>
-                        <article></article>
+                        <article className="w-full relative flex items-center justify-start xl:justify-end">
+                            <img className="w-full max-w-[90%] max-h-[450px] object-contain h-auto" src={Images.ProcessFlowMainimg} alt="" />
+                            <video
+                                className="processOverlap-video absolute top-10 -right-20 object-cover object-center rounded-3xl max-w-[400px] w-full max-h-[450px] overflow-hidden"
+                                autoPlay
+                                muted
+                                loop
+                                src={Videos.mainLeftVideo}>
+                            </video>
+                        </article>
                     </section>
                 </div>
             </section>
