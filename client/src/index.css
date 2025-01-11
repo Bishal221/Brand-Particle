@@ -1,75 +1,150 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-body{
-    position: relative;
-    font-family: "Inter", serif;
+body {
+	position: relative;
+	font-family: "Inter", serif;
 }
 
-.normal-nav{
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    transition: max-width 0.5s ease, padding-right 0.5s ease, padding-left 0.5s ease, backgroud 0.5s ease;
+.normal-nav {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	transition: max-width 0.5s ease, padding-right 0.5s ease,
+		padding-left 0.5s ease, backgroud 0.5s ease;
 }
 
-.menuOpen{
-    background: #f5f5f5cc;
-    padding: 1rem 1rem 1rem 1.5rem;
-    max-width: 1000px;
-    width: 90%;
-    border-radius: 1rem;
-    /* transition: pa; */
+.menuOpen {
+	background: #f5f5f5cc;
+	padding: 1rem 1rem 1rem 1.5rem;
+	max-width: 1000px;
+	width: 90%;
+	border-radius: 1rem;
+	/* transition: pa; */
 }
 
-.dark .menuOpen{
-    background: #26282c;
+.dark .menuOpen {
+	background: #26282c;
 }
 
-.navScroll{
-    max-width: 320px;
-    width: 100%;
-    border-radius: 99999px;
-    background: #f5f5f5cc;
+.navScroll {
+	max-width: 320px;
+	width: 100%;
+	border-radius: 99999px;
+	background: #f5f5f5cc;
 }
 
-.dark .navScroll{
-    background: #26282ccc;
+.dark .navScroll {
+	background: #26282ccc;
 }
 
-@media (min-width: 460px){
-    .navScroll{
-        max-width: 360px;
-    }
-}
-@media (min-width: 640px){
-    .navScroll{
-        max-width: 560px;
-        width: 100%;
-    }
-}
-@media (min-width: 768px){
-    .navScroll{
-        padding-left: 1.75rem;
-        padding-right: 1rem;
-    }
-}
-@media (min-width: 1024px){
-    .navScroll{
-        max-width: 1000px;
-    }
+@media (min-width: 460px) {
+	.navScroll {
+		max-width: 360px;
+	}
 }
 
-.menuOpen.navScroll{
-    border-radius: 1rem;
-    max-width: 1000px !important;
-    width: 90%;
-    /* background: #26282ccc !important; */
+@media (min-width: 640px) {
+	.navScroll {
+		max-width: 560px;
+		width: 100%;
+	}
 }
-.menuOpen.navScroll > section{
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+
+@media (min-width: 768px) {
+	.navScroll {
+		padding-left: 1.75rem;
+		padding-right: 1rem;
+	}
+}
+
+@media (min-width: 1024px) {
+	.navScroll {
+		max-width: 1000px;
+	}
+}
+
+.menuOpen.navScroll {
+	border-radius: 1rem;
+	max-width: 1000px !important;
+	width: 90%;
+	/* background: #26282ccc !important; */
+}
+
+.menuOpen.navScroll>section {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+.about-us-min-text {
+	color: #c9ff51;
+	background-image: linear-gradient(180deg, #c9ff51 58%, #ffffff00 75%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+
+.main-service-conatiner {
+	&>div {
+		&:first-child {
+			position: relative;
+			top: -180px;
+		}
+	}
+}
+
+@media (max-width: 1023px) {
+	.main-service-conatiner {
+		&>div {
+			&:first-child {
+				position: relative;
+				top: -100px;
+			}
+		}
+	}
+}
+
+@media (max-width: 640px) {
+	.main-service-conatiner {
+		&>div {
+			&:first-child {
+				position: relative;
+				top: 0;
+			}
+		}
+	}
+}
+
+.portfolio-min-text {
+	color: #c9ff51;
+	background-image: linear-gradient(180deg, #c9ff51 0%, #ffffff3c 75%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	opacity: 65%;
+	animation: rotateGradient 4s linear infinite; /* Define the animation */
+}
+
+.processFlow-main-text {
+	background: #CFFE71;
+	background: linear-gradient(to right, #CFFE71 0%, #8AB49B 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: rotateGradient 1s linear infinite; /* Define the animation */
+}
+
+.processFlow-main-container {
+	background: rgb(208, 255, 113);
+	background: -moz-linear-gradient(180deg, rgba(208, 255, 113, 0.83) 9%, rgba(208, 255, 113, 0.07) 100%);
+	background: -webkit-linear-gradient(180deg, rgba(208, 255, 113, 0.83) 9%, rgba(208, 255, 113, 0.07) 100%);
+	background: linear-gradient(180deg, rgba(208, 255, 113, 0.83) 9%, rgba(208, 255, 113, 0.07) 100%);
+}
+
+@media (max-width:1460px) {
+	.processOverlap-video{
+		right: -40px !important;
+	}
 }
