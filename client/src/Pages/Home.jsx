@@ -67,7 +67,7 @@ const Home = () => {
             },
         ],
     ];
-    
+
 
 
     return (
@@ -166,7 +166,7 @@ const Home = () => {
                                                                         item.tags.map((tag) => {
                                                                             return (
                                                                                 <p className="text-white rounded-full backdrop-blur-md text-xs py-2 px-4 uppercase bg-[rgba(110,127,153,0.11)]">
-                                                                                    { tag }
+                                                                                    {tag}
                                                                                 </p>
                                                                             )
                                                                         })
@@ -180,10 +180,10 @@ const Home = () => {
                                                                 </video>
                                                             </div>
                                                             <div className="text-white w-full flex flex-col items-start justify-start gap-2">
-                                                                <h1 className="text-2xl custom-sm:text-4xl sm:text-2xl lg:text-4xl font-semibold">{ item.name }</h1>
+                                                                <h1 className="text-2xl custom-sm:text-4xl sm:text-2xl lg:text-4xl font-semibold">{item.name}</h1>
                                                                 <div className="flex items-start lg:items-center justify-start gap-2">
                                                                     <span className="w-2 h-2 rounded-full bg-white block mt-2"></span>
-                                                                    <p className="font-light text-sm sm:text-xs lg:text-sm w-[95%]">{ item.description }</p>
+                                                                    <p className="font-light text-sm sm:text-xs lg:text-sm w-[95%]">{item.description}</p>
                                                                 </div>
                                                             </div>
                                                         </article>
@@ -214,6 +214,30 @@ const Home = () => {
                             <article className="flex items-center justify-center gap-2 text-white text-xs sm:text-sm md:text-lg xl:text-xl"><span className="text-base md:text-xl xl:text-2xl"><FaCheckCircle /></span>High-converting Webinars</article>
                         </div>
                     </article>
+                </section>
+            </section>
+
+            <section className="max-w-screen w-full dark:bg-dark-bg py-20 px-4 md:px-0">
+                <section className="container mx-auto border border-red-500">
+                    <article className="flex items-center justify-between gap-10">
+                        <article>
+                            <h1>How</h1>
+                            <h1>We Process</h1>
+                        </article>
+                        <article>
+                            <div>
+                                <span></span>
+                                <h3>See How It Works</h3>
+                            </div>
+                            <div>
+                                <p>Say goodbye to old fashioned theme options! Hub
+                                    employs a live customizer so you can adjust global
+                                    theme options and see design changes in real-time
+                                    thanks to the next generation live customizer.</p>
+                            </div>
+                        </article>
+                    </article>
+                    <article></article>
                 </section>
             </section>
         </>
