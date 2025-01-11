@@ -247,7 +247,7 @@ const Home = () => {
             <section className="max-w-screen w-full dark:bg-dark-bg py-20 px-4">
                 <div className="container mx-auto flex flex-col items-start justify-start gap-10 xl:gap-16">
                     <section className="flex sm:items-center justify-between flex-col sm:flex-row gap-8 custom-sm:gap-10 sm:gap-5 lg:gap-10 w-full">
-                        <article className="w-fit sm:w-1/2">
+                        <article className="w-fit sm:w-1/2 md:w-fit">
                             <h1 className="text-5xl custom-sm:text-7xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-white font-bold">How</h1>
                             <h1 className="processFlow-main-text text-5xl custom-sm:text-7xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold relative z-[1] before:absolute before:content-[''] before:bg-[#D0FF71] before:opacity-[37%] before:w-full before:bottom-1 sm:before:bottom-0 xl:before:bottom-1 before:h-3 sm:before:h-2 md:before:h-3 before:-z-[1]">We Process.</h1>
                         </article>
