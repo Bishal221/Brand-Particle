@@ -428,6 +428,27 @@ const Home = () => {
                     </section>
                 </div>
             </section>
+
+            <section className="max-w-screen w-full dark:bg-dark-bg py-20 px-4">
+                <div className="container mx-auto border border-red-500 relative">
+                    <section className="flex items-center justify-center flex-col gap-6">
+                        <article className="flex items-center justify-center gap-2">
+                            <span className="text-xs text-white px-[8px] py-[3px] rounded-full bg-[#262626] ">Join Now</span>
+                            <p className="text-white text-sm">Don't Pay, Test Us First!</p>
+                        </article>
+                        <article>
+                            <h1 className="text-8xl text-center font-bold">We Don't Sell, <br /> We Discuss</h1>
+                        </article>
+                        <article>
+                            <p>Want to skyrocket your business? Book a call with us, and let's see if we're the perfect fit to work together.
+                            </p>
+                        </article>
+                        <article>
+                            <button>Book A Call With Us</button>
+                        </article>
+                    </section>
+                </div>
+            </section>
         </>
     );
 };
