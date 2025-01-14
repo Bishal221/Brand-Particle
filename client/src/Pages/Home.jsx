@@ -5,6 +5,7 @@ import { FaCheckCircle } from "react-icons/fa";
 import { FaPlay } from "react-icons/fa6";
 import { IoMdClose } from "react-icons/io";
 import BlogItem from "../Components/BlogItem";
+import { IoCall } from "react-icons/io5";
 
 const Home = () => {
 
@@ -430,21 +431,27 @@ const Home = () => {
             </section>
 
             <section className="max-w-screen w-full dark:bg-dark-bg py-20 px-4">
-                <div className="container mx-auto border border-red-500 relative">
-                    <section className="flex items-center justify-center flex-col gap-6">
+                <div className="container mx-auto relative z-[2]">
+                    <section className="absolute -top-12 left-1/2 -translate-x-1/2 -z-[1]">
+                        <img className="opacity-10" src={Images.NetBG} alt="" />
+                    </section>
+                    <section className="flex items-center justify-center flex-col gap-8">
                         <article className="flex items-center justify-center gap-2">
                             <span className="text-xs text-white px-[8px] py-[3px] rounded-full bg-[#262626] ">Join Now</span>
                             <p className="text-white text-sm">Don't Pay, Test Us First!</p>
                         </article>
-                        <article>
-                            <h1 className="text-8xl text-center font-bold">We Don't Sell, <br /> We Discuss</h1>
+                        <article className="relative">
+                            <div className="absolute -right-40 -top-24 animate-upDownAnimation">
+                                <img src={ Images.FlotingElement } alt="" />
+                            </div>
+                            <h1 className="text-8xl text-white text-center font-extrabold">We <span className="Community-text relative z-[1] before:absolute before:content-[''] before:bg-[#D0FF71] before:opacity-[15%] before:w-full before:bottom-2 before:h-3 md:before:h-5 md:before:bottom-4 before:-z-[1]">Don't Sell</span>, <br /> We Discuss</h1>
                         </article>
                         <article>
-                            <p>Want to skyrocket your business? Book a call with us, and let's see if we're the perfect fit to work together.
+                            <p className="text-white text-center opacity-70 text-xl font-light max-w-[550px]">Want to skyrocket your business? Book a call with us, and let's see if we're the perfect fit to work together.
                             </p>
                         </article>
                         <article>
-                            <button>Book A Call With Us</button>
+                            <button className="text-white flex items-center justify-center gap-4 py-4 px-10 border-2 border-white rounded-full">Book A Call With Us <span><IoCall /></span></button>
                         </article>
                     </section>
                 </div>
