@@ -8,10 +8,6 @@ export default {
   theme: {
     extend: {
       keyframes: {
-        upDownAnimation: {
-          '0%, 100%': { top: '-6rem' },
-          '50%': { top: "-4rem" },
-        }
       },
       screens: {
         'custom-lg': '1100px', // Define a custom breakpoint named "custom-lg"
@@ -19,7 +15,6 @@ export default {
       },
       animation: {
         'spin-slow': 'spin 5s linear infinite',
-        'upDownAnimation': 'upDownAnimation 4s linear infinite',
       },
       colors: {
         "dark-primary": "#D0FF71",

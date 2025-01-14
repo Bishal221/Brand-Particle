@@ -197,12 +197,17 @@ body {
 	-webkit-text-fill-color: transparent;
 }
 
-/* @keyframes upDownAnimation {
-	0% {
-		transform: translateY(0, 0%);
+.upDownAnimation{
+	transform: translateY(0);
+	animation: upDownAnimation 3s linear infinite;
+}
+
+@keyframes upDownAnimation {
+	0%,100% {
+		transform: translateY(0);
 	}
 
-	100% {
-		transform: translateY(10%, 3%);
+	50% {
+		transform: translateY(20%);
 	}
-} */
+}

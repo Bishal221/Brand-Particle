@@ -432,26 +432,26 @@ const Home = () => {
 
             <section className="max-w-screen w-full dark:bg-dark-bg py-20 px-4">
                 <div className="container mx-auto relative z-[2]">
-                    <section className="absolute -top-12 left-1/2 -translate-x-1/2 -z-[1]">
+                    <section className="absolute -top-8 custom-sm:-top-12 left-1/2 -translate-x-1/2 -z-[1] max-w-[280px] custom-sm:max-w-[350px] w-full">
                         <img className="opacity-10" src={Images.NetBG} alt="" />
                     </section>
-                    <section className="flex items-center justify-center flex-col gap-8">
+                    <section className="flex items-center justify-center flex-col gap-2 lg:gap-8">
                         <article className="flex items-center justify-center gap-2">
                             <span className="text-xs text-white px-[8px] py-[3px] rounded-full bg-[#262626] ">Join Now</span>
                             <p className="text-white text-sm">Don't Pay, Test Us First!</p>
                         </article>
                         <article className="relative">
-                            <div className="absolute -right-40 -top-24 animate-upDownAnimation">
+                            <div className="absolute -right-32 lg:-right-40 -top-24 upDownAnimation">
                                 <img src={ Images.FlotingElement } alt="" />
                             </div>
-                            <h1 className="text-8xl text-white text-center font-extrabold">We <span className="Community-text relative z-[1] before:absolute before:content-[''] before:bg-[#D0FF71] before:opacity-[15%] before:w-full before:bottom-2 before:h-3 md:before:h-5 md:before:bottom-4 before:-z-[1]">Don't Sell</span>, <br /> We Discuss</h1>
+                            <h1 className="text-5xl custom-sm:text-6xl sm:text-7xl lg:text-8xl text-white text-center font-extrabold">We <span className="Community-text relative z-[1] before:absolute before:content-[''] before:bg-[#D0FF71] before:opacity-[15%] before:w-full before:bottom-2 before:h-3 md:before:h-5 md:before:bottom-4 before:-z-[1]">Don't Sell</span>, <br /> We Discuss</h1>
                         </article>
-                        <article>
-                            <p className="text-white text-center opacity-70 text-xl font-light max-w-[550px]">Want to skyrocket your business? Book a call with us, and let's see if we're the perfect fit to work together.
+                        <article className="my-5 lg:my-0">
+                            <p className="text-white text-center opacity-70 text-sm custom-sm:text-base lg:text-xl font-light max-w-[450px] lg:max-w-[550px]">Want to skyrocket your business? Book a call with us, and let's see if we're the perfect fit to work together.
                             </p>
                         </article>
                         <article>
-                            <button className="text-white flex items-center justify-center gap-4 py-4 px-10 border-2 border-white rounded-full">Book A Call With Us <span><IoCall /></span></button>
+                            <Link to={''} className="text-white text-sm custom-sm:text-base flex items-center justify-center gap-4 py-2 custom-sm:py-4 px-6 custom-sm:px-10 border-2 border-white rounded-full">Book A Call With Us <span><IoCall /></span></Link>
                         </article>
                     </section>
                 </div>
