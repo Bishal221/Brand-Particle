@@ -158,3 +158,22 @@ body {
 		right: 0 !important;
 	}
 }
+
+@media (min-width: 1024px){
+	.small-service-container{
+		article{
+			&:nth-child(odd){
+				position: relative;
+				top: -60px;
+			}
+			&:nth-child(3){
+				position: relative;
+				top: -30px;
+			}
+			&:nth-child(4){
+				position: relative;
+				top: 10px;
+			}
+		}
+	}
+}

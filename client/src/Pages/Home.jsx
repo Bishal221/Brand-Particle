@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { FaCheckCircle } from "react-icons/fa";
 import { FaPlay } from "react-icons/fa6";
 import { IoMdClose } from "react-icons/io";
+import BlogItem from "../Components/BlogItem";
 
 const Home = () => {
 
@@ -93,7 +94,67 @@ const Home = () => {
             heading: "Seamless Webinar Execution",
             content: "This is where you earn your cash. From registration to follow-ups, we make sure your webinars deliver the success for which you trusted us. <br/> <br/> Don’t know how to pitch? Don’t worry — our sales sharks will be there to guide you!",
         },
-    ]
+    ];
+
+
+    const SmallService = [
+        {
+            id: 1,
+            img: Images.WebDev,
+            tittle: "Website Development",
+            caption: "Communicating Vision",
+        },
+        {
+            id: 2,
+            img: Images.AppDev,
+            tittle: "App Development",
+            caption: "Seamless Connectivity",
+        },
+        {
+            id: 3,
+            img: Images.Design,
+            tittle: "Creative Design",
+            caption: "Designing Success",
+        },
+        {
+            id: 4,
+            img: Images.Social,
+            tittle: "Social Media Management",
+            caption: "Fueling Engagement",
+        },
+        {
+            id: 5,
+            img: Images.Marketing,
+            tittle: "Strategic Marketing",
+            caption: "Planning Futures",
+        },
+        {
+            id: 6,
+            img: Images.WebinarFunnel,
+            tittle: "Advanced Webinar <br /> Funnel Setup",
+            caption: "Empowering Growth",
+        },
+    ];
+
+
+    const LatestBlog = [
+        {
+            id: 1,
+            title: "Hubfolio agency revolutionizes work with the power of AI-Driven",
+            catagory: "Design Trends",
+            date: "/ August 13, 2024",
+            img: Images.Post1,
+            link: "/",
+        },
+        {
+            id: 2,
+            title: "Hubfolio agency revolutionizes work with the power of AI-Driven",
+            catagory: "Design Trends",
+            date: "/ August 13, 2024",
+            img: Images.Post1 ,
+            link: "/",
+        },
+    ];
 
 
 
@@ -190,9 +251,9 @@ const Home = () => {
                                                                         <img src={Images.ServiceComponent} alt="" />
                                                                     </div>
                                                                     {
-                                                                        item.tags.map((tag) => {
+                                                                        item.tags.map((tag, i) => {
                                                                             return (
-                                                                                <p className="text-white rounded-full backdrop-blur-md text-xs py-2 px-4 uppercase bg-[rgba(110,127,153,0.11)]">
+                                                                                <p key={i} className="text-white rounded-full backdrop-blur-md text-xs py-2 px-4 uppercase bg-[rgba(110,127,153,0.11)]">
                                                                                     {tag}
                                                                                 </p>
                                                                             )
@@ -299,6 +360,71 @@ const Home = () => {
                                 src={Videos.mainLeftVideo}>
                             </video>
                         </article>
+                    </section>
+                </div>
+            </section>
+
+
+
+            <section className="max-w-screen w-full dark:bg-dark-bg py-20 px-4">
+                <div className="container mx-auto">
+                    <section className="flex flex-col md:flex-row items-start md:items-end justify-between gap-5 sm:gap-8 md:gap-5 xl:gap-10">
+                        <article className="w-full md:w-1/2">
+                            <h1 className="text-3xl custom-sm:text-4xl sm:text-6xl md:text-3xl lg:text-5xl xl:text-6xl font-bold text-dark-primary">Relax, We <br /> Manage <span className="relative z-[1] before:absolute before:content-[''] before:bg-[#D0FF71] before:opacity-[20%] before:w-full before:bottom-2 before:h-3 sm:before:h-2 md:before:h-3 before:-z-[1]">Everything!</span></h1>
+                        </article>
+                        <article className="md:max-w-[50%] lg:max-w-[400px] xl:max-w-[500px] w-full">
+                            <p className="text-white text-sm custom-sm:text-base sm:text-xl md:text-base lg:text-lg xl:text-xl">Our team of digital warriors will do everything for you so that you can focus on what you do the best — Running your business.</p>
+                        </article>
+                    </section>
+                    <section className="mt-12 lg:mt-32 flex items-start md:items-center justify-evenly gap-y-8 gap-x-10 custom-sm:gap-5 small-service-container flex-wrap lg:flex-nowrap relative">
+                        {SmallService.map((service, index) => {
+                            return (
+                                <>
+                                    <article key={index} className="flex max-w-[155px] custom-sm:min-w-[180px] custom-sm:max-w-[200px] sm:min-w-[130px] xl:min-w-[160px] items-center justify-center gap-3 flex-col">
+                                        <div className="flex items-center justify-center w-28 h-28 rounded-full bg-white">
+                                            <img className="w-[60px]" src={service.img} alt="" />
+                                        </div>
+                                        <div className="flex items-center justify-center gap-1 flex-col">
+                                            <h1 className="text-lg font-semibold text-white text-center" dangerouslySetInnerHTML={{ __html: service.tittle }}></h1>
+                                            <p className="py-1 px-2 rounded-full text-xs bg-dark-primary text-center font-medium">{service.caption}</p>
+                                        </div>
+                                    </article>
+                                </>
+                            )
+                        })}
+                    </section>
+                </div>
+            </section>
+
+
+            <section className="max-w-screen w-full dark:bg-dark-bg py-20 px-4">
+                <div className="container mx-auto">
+                    <section className="flex items-start lg:items-center justify-between flex-col lg:flex-row gap-5 lg:gap-20">
+                        <article className="flex items-center justify-start gap-2">
+                            <span className="w-2 h-2 rounded-full bg-white block"></span>
+                            <p className="text-white">Latest Articles</p>
+                        </article>
+                        <article className="flex items-start justify-start xl:gap-2 flex-col w-full lg:max-w-[700px] xl:max-w-[800px]">
+                            <h1 className="text-white text-2xl sm:text-3xl lg:text-2xl xl:text-4xl lg:indent-[20%] w-full">The place where we share everything related to making your biz standout in this crowded digital world!</h1>
+                            {/* <h1 className="text-white text-2xl xl:text-3xl text-left w-full"></h1> */}
+                        </article>
+                    </section>
+
+                    <section className="mt-10 xl:mt-16">
+                        <section className="flex items-center justify-between gap-10 flex-col lg:flex-row">
+                            {LatestBlog.map((blog, index) => {
+                                return (
+                                    <BlogItem
+                                        keyItem = {index}
+                                        title={ blog.title}
+                                        catagory={ blog.catagory}
+                                        date={ blog.date}
+                                        img={ blog.img}
+                                    />
+                                )
+                            }) }
+                        </section>
+                        <div></div>
                     </section>
                 </div>
             </section>
