@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Images, Videos } from "../assets/Index";
 import { Link } from "react-router-dom";
-import { FaCheckCircle } from "react-icons/fa";
-import { FaPlay } from "react-icons/fa6";
-import { IoMdClose } from "react-icons/io";
+import { FaCheckCircle, FaMapPin } from "react-icons/fa";
+import { FaPlay, FaArrowRight } from "react-icons/fa6";
+import { IoMdClose, IoIosMail } from "react-icons/io";
 import BlogItem from "../Components/BlogItem";
 import { IoCall } from "react-icons/io5";
 
@@ -152,7 +152,7 @@ const Home = () => {
             title: "Hubfolio agency revolutionizes work with the power of AI-Driven",
             catagory: "Design Trends",
             date: "/ August 13, 2024",
-            img: Images.Post1 ,
+            img: Images.Post1,
             link: "/",
         },
     ];
@@ -416,14 +416,14 @@ const Home = () => {
                             {LatestBlog.map((blog, index) => {
                                 return (
                                     <BlogItem
-                                        keyItem = {index}
-                                        title={ blog.title}
-                                        catagory={ blog.catagory}
-                                        date={ blog.date}
-                                        img={ blog.img}
+                                        keyItem={index}
+                                        title={blog.title}
+                                        catagory={blog.catagory}
+                                        date={blog.date}
+                                        img={blog.img}
                                     />
                                 )
-                            }) }
+                            })}
                         </section>
                         <div></div>
                     </section>
@@ -442,7 +442,7 @@ const Home = () => {
                         </article>
                         <article className="relative">
                             <div className="absolute -right-32 lg:-right-40 -top-24 upDownAnimation">
-                                <img src={ Images.FlotingElement } alt="" />
+                                <img src={Images.FlotingElement} alt="" />
                             </div>
                             <h1 className="text-5xl custom-sm:text-6xl sm:text-7xl lg:text-8xl text-white text-center font-extrabold">We <span className="Community-text relative z-[1] before:absolute before:content-[''] before:bg-[#D0FF71] before:opacity-[15%] before:w-full before:bottom-2 before:h-3 md:before:h-5 md:before:bottom-4 before:-z-[1]">Don't Sell</span>, <br /> We Discuss</h1>
                         </article>
@@ -456,6 +456,65 @@ const Home = () => {
                     </section>
                 </div>
             </section>
+
+
+            <footer className="max-w-screen w-full dark:bg-dark-bg px-4 py-10">
+                <section className="container mx-auto bg-[#1A1B1E] px-20 pt-16 pb-10 rounded-b-2xl">
+                    <div className="">
+                        <section className="flex items-start justify-between gap-10">
+                            <div className="max-w-[30%] w-full">
+                                <h1 className="text-5xl text-white mb-6">Do you like what you see?</h1>
+                                <article className="flex items-center justify-between gap-5">
+                                    <div className='hidden lg:flex items-center justify-start group select-none'>
+                                        <Link className='py-3 text-lg px-6 bg-dark-primary rounded-full group-hover:mr-1 -mr-3 transition-all duration-300 font-medium leading-none'>
+                                            Schedule a call
+                                        </Link>
+                                        <span className='bg-dark-primary flex items-center justify-center text-base group-hover:rotate-0 transition-all duration-300 -rotate-45 rounded-full w-10 h-10'>
+                                            <FaArrowRight />
+                                        </span>
+                                    </div>
+                                    <div className="max-w-[97px]">
+                                        <img className="w-full" src={Images.GoogleRating} alt="" />
+                                    </div>
+                                </article>
+                            </div>
+                            <article className="w-fit">
+                                <h1 className="text-3xl text-white">Company</h1>
+                                <ul className="flex items-start justify-start flex-col gap-2 text-white mt-5">
+                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>About us</Link></li>
+                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>Culture</Link></li>
+                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>Testimonials</Link></li>
+                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>Process</Link></li>
+                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>FAQ's</Link></li>
+                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>Braning FAQ's</Link></li>
+                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>Blog</Link></li>
+                                </ul>
+                            </article>
+                            <article className="w-fit">
+                                <h1 className="text-3xl text-white">Explore</h1>
+                                <ul className="flex items-start justify-start flex-col gap-2 text-white mt-5">
+                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>Home</Link></li>
+                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>Work</Link></li>
+                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>Services</Link></li>
+                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>Careers</Link></li>
+                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>Sectors</Link></li>
+                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>Hex Test</Link></li>
+                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>Contact</Link></li>
+                                </ul>
+                            </article>
+                            <article className="max-w-[20%] w-full">
+                                <h1 className="text-3xl text-white">Get in touch</h1>
+                                <ul className="flex items-start justify-start flex-col gap-2 text-white mt-5 opacity-50">
+                                    <li className="flex items-start gap-3"><span className="mt-1 text-lg"><IoCall /></span>+91 1234567890</li>
+                                    <li className="flex items-start gap-3"><span className="mt-1 text-lg"><IoIosMail /></span>email@email.com</li>
+                                    <li className="flex items-start gap-3"><span className="mt-1 text-lg"><FaMapPin /></span>12/1A/3D Chowbagha Road Kolkata - 700039</li>
+                                </ul>
+                            </article>
+                        </section>
+                        <section></section>
+                    </div>
+                </section>
+            </footer>
         </>
     );
 };

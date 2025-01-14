@@ -16,6 +16,7 @@ import AboutUsElement1 from "./Images/about-us-element1.png";
 import Post1 from "./Images/post1.png";
 import NetBG from "./Images/netbg.png";
 import FlotingElement from "./Images/FlotingElement.png";
+import GoogleRating from "./Images/google-rating.png";
 import mainLeftVideo from "./Videos/showreel-2024-portrait_cropped.mp4";
 
 // Export assets
@@ -36,7 +37,8 @@ export const Images = {
     Marketing,
     Post1,
     NetBG,
-    FlotingElement
+    FlotingElement,
+    GoogleRating,
 };
 
 export const Videos = {
