@@ -7,6 +7,8 @@ export default {
   ],
   theme: {
     extend: {
+      keyframes: {
+      },
       screens: {
         'custom-lg': '1100px', // Define a custom breakpoint named "custom-lg"
         'custom-sm': '490px', // Define a custom breakpoint named "custom-lg"

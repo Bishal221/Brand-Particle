@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import { Images, Videos } from "../assets/Index";
 import { Link } from "react-router-dom";
-import { FaCheckCircle } from "react-icons/fa";
-import { FaPlay } from "react-icons/fa6";
-import { IoMdClose } from "react-icons/io";
+import { FaCheckCircle, FaMapPin, FaLinkedin, FaInstagram, FaFacebookSquare, FaYoutube } from "react-icons/fa";
+import { FaPlay, FaArrowRight, FaXTwitter } from "react-icons/fa6";
+import { IoMdClose, IoIosMail } from "react-icons/io";
 import BlogItem from "../Components/BlogItem";
+import { IoCall } from "react-icons/io5";
 
 const Home = () => {
 
     const [processFlowFAQ, setProcessFlowFAQ] = useState(1);
+    const [year, setYear] = useState(new Date().getFullYear())
 
     const ServicesArray = [
         [
@@ -151,7 +153,7 @@ const Home = () => {
             title: "Hubfolio agency revolutionizes work with the power of AI-Driven",
             catagory: "Design Trends",
             date: "/ August 13, 2024",
-            img: Images.Post1 ,
+            img: Images.Post1,
             link: "/",
         },
     ];
@@ -415,19 +417,141 @@ const Home = () => {
                             {LatestBlog.map((blog, index) => {
                                 return (
                                     <BlogItem
-                                        keyItem = {index}
-                                        title={ blog.title}
-                                        catagory={ blog.catagory}
-                                        date={ blog.date}
-                                        img={ blog.img}
+                                        keyItem={index}
+                                        title={blog.title}
+                                        catagory={blog.catagory}
+                                        date={blog.date}
+                                        img={blog.img}
                                     />
                                 )
-                            }) }
+                            })}
                         </section>
                         <div></div>
                     </section>
                 </div>
             </section>
+
+            <section className="max-w-screen w-full dark:bg-dark-bg py-20 px-4">
+                <div className="container mx-auto relative z-[2]">
+                    <section className="absolute -top-8 custom-sm:-top-12 left-1/2 -translate-x-1/2 -z-[1] max-w-[280px] custom-sm:max-w-[350px] w-full">
+                        <img className="opacity-10" src={Images.NetBG} alt="" />
+                    </section>
+                    <section className="flex items-center justify-center flex-col gap-2 lg:gap-8">
+                        <article className="flex items-center justify-center gap-2">
+                            <span className="text-xs text-white px-[8px] py-[3px] rounded-full bg-[#262626] ">Join Now</span>
+                            <p className="text-white text-sm">Don't Pay, Test Us First!</p>
+                        </article>
+                        <article className="relative">
+                            <div className="absolute -right-32 lg:-right-40 -top-24 upDownAnimation">
+                                <img src={Images.FlotingElement} alt="" />
+                            </div>
+                            <h1 className="text-5xl custom-sm:text-6xl sm:text-7xl lg:text-8xl text-white text-center font-extrabold">We <span className="Community-text relative z-[1] before:absolute before:content-[''] before:bg-[#D0FF71] before:opacity-[15%] before:w-full before:bottom-2 before:h-3 md:before:h-5 md:before:bottom-4 before:-z-[1]">Don't Sell</span>, <br /> We Discuss</h1>
+                        </article>
+                        <article className="my-5 lg:my-0">
+                            <p className="text-white text-center opacity-70 text-sm custom-sm:text-base lg:text-xl font-light max-w-[450px] lg:max-w-[550px]">Want to skyrocket your business? Book a call with us, and let's see if we're the perfect fit to work together.
+                            </p>
+                        </article>
+                        <article>
+                            <Link to={''} className="text-white text-sm custom-sm:text-base flex items-center justify-center gap-4 py-2 custom-sm:py-4 px-6 custom-sm:px-10 border-2 border-white rounded-full">Book A Call With Us <span><IoCall /></span></Link>
+                        </article>
+                    </section>
+                </div>
+            </section>
+
+
+            <footer className="max-w-screen w-full dark:bg-dark-bg px-4 py-10">
+                <section className="container mx-auto bg-[#1A1B1E] px-20 pt-16 pb-10 rounded-b-2xl relative">
+
+                    <div className="absolute top-0 left-0 w-14 h-60 bg-dark-bg z-[1]">
+                            <span className="absolute bottom-[0.75rem] left-[28px] w-[1.75rem] bg-[#1A1B1E] h-16 -z-[1]"></span>
+                            <span className="absolute bottom-[2.25rem] left-0 w-full bg-dark-bg h-10 rounded-br-full -z-[1]"></span>
+                            <span className="absolute bottom-0 left-0 w-full bg-[#1A1B1E] h-10 rounded-tl-full -z-[1]"></span>
+
+                        <article className="w-full flex flex-col items-center justify-start h-full gap-2 z-[2] pt-2">
+                            <Link className="w-7 h-7 bg-dark-primary rounded-full flex items-center justify-center text-black" to={''}>
+                                <FaLinkedin />
+                            </Link>
+                            <Link className="w-7 h-7 bg-dark-primary rounded-full flex items-center justify-center text-black" to={''}>
+                                <FaInstagram />
+                            </Link>
+                            <Link className="w-7 h-7 bg-dark-primary rounded-full flex items-center justify-center text-black" to={''}>
+                                <FaFacebookSquare />
+                            </Link>
+                            <Link className="w-7 h-7 bg-dark-primary rounded-full flex items-center justify-center text-black" to={''}>
+                                <FaYoutube />
+                            </Link>
+                            <Link className="w-7 h-7 bg-dark-primary rounded-full flex items-center justify-center text-black" to={''}>
+                                <FaXTwitter />
+                            </Link>
+                        </article>
+                    </div>
+
+
+                    <div className="flex items-start justify-start flex-col gap-12">
+                        <section className="flex items-start justify-between gap-10">
+                            <div className="max-w-[30%] w-full">
+                                <h1 className="text-5xl text-white mb-6">Do you like what you see?</h1>
+                                <article className="flex items-center justify-between gap-5">
+                                    <div className='hidden lg:flex items-center justify-start group select-none'>
+                                        <Link className='py-3 text-lg px-6 bg-dark-primary rounded-full group-hover:mr-1 -mr-3 transition-all duration-300 font-medium leading-none'>
+                                            Schedule a call
+                                        </Link>
+                                        <span className='bg-dark-primary flex items-center justify-center text-base group-hover:rotate-0 transition-all duration-300 -rotate-45 rounded-full w-10 h-10'>
+                                            <FaArrowRight />
+                                        </span>
+                                    </div>
+                                    <div className="max-w-[97px]">
+                                        <img className="w-full" src={Images.GoogleRating} alt="" />
+                                    </div>
+                                </article>
+                            </div>
+                            <article className="w-fit">
+                                <h1 className="text-3xl text-white">Company</h1>
+                                <ul className="flex items-start justify-start flex-col gap-2 text-white mt-5">
+                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>About us</Link></li>
+                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>Culture</Link></li>
+                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>Testimonials</Link></li>
+                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>Process</Link></li>
+                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>FAQ's</Link></li>
+                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>Braning FAQ's</Link></li>
+                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>Blog</Link></li>
+                                </ul>
+                            </article>
+                            <article className="w-fit">
+                                <h1 className="text-3xl text-white">Explore</h1>
+                                <ul className="flex items-start justify-start flex-col gap-2 text-white mt-5">
+                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>Home</Link></li>
+                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>Work</Link></li>
+                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>Services</Link></li>
+                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>Careers</Link></li>
+                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>Sectors</Link></li>
+                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>Hex Test</Link></li>
+                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>Contact</Link></li>
+                                </ul>
+                            </article>
+                            <article className="max-w-[20%] w-full">
+                                <h1 className="text-3xl text-white">Get in touch</h1>
+                                <ul className="flex items-start justify-start flex-col gap-2 text-white mt-5 opacity-50">
+                                    <li className="flex items-start gap-3"><span className="mt-1 text-lg"><IoCall /></span>+91 1234567890</li>
+                                    <li className="flex items-start gap-3"><span className="mt-1 text-lg"><IoIosMail /></span>email@email.com</li>
+                                    <li className="flex items-start gap-3"><span className="mt-1 text-lg"><FaMapPin /></span>12/1A/3D Chowbagha Road Kolkata - 700039</li>
+                                </ul>
+                            </article>
+                        </section>
+                        <section className="flex items-center justify-between gap-10 w-full">
+                            <article className="flex items-center justify-between gap-8">
+                                <img className="w-[180px]" src={Images.BrandWhite} alt="" />
+                                <p className="text-white opacity-50 text-sm">©{year} Brand Particle Pvt Ltd 2024</p>
+                            </article>
+                            <article className="text-white opacity-50 flex items-center justify-end text-sm min-w-[650px]">
+                                <Link to={'#'} className="pr-4">Brand Creators From Kolkata</Link>
+                                <Link to={'#'} className="border-l border-r border-slate-400 px-4">All Rights Reserved</Link>
+                                <Link to={'#'} className="pl-4">Privacy Policy(you really care?)</Link>
+                            </article>
+                        </section>
+                    </div>
+                </section>
+            </footer>
         </>
     );
 };

@@ -4,9 +4,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+	font-family: "Eina";
+	/*Can be any text*/
+	src: url("./assets/Font/eina.woff2") format("woff2");
+}
+
 body {
 	position: relative;
-	font-family: "Inter", serif;
+	font-family: "Eina", serif;
 }
 
 .normal-nav {
@@ -125,7 +131,8 @@ body {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	opacity: 65%;
-	animation: rotateGradient 4s linear infinite; /* Define the animation */
+	animation: rotateGradient 4s linear infinite;
+	/* Define the animation */
 }
 
 .processFlow-main-text {
@@ -133,7 +140,8 @@ body {
 	background: linear-gradient(to right, #CFFE71 0%, #8AB49B 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	animation: rotateGradient 1s linear infinite; /* Define the animation */
+	animation: rotateGradient 1s linear infinite;
+	/* Define the animation */
 }
 
 .processFlow-main-container {
@@ -144,36 +152,62 @@ body {
 }
 
 @media (max-width:1460px) {
-	.processOverlap-video{
+	.processOverlap-video {
 		right: -40px !important;
 	}
 }
+
 @media (max-width: 1024px) {
-	.processOverlap-video{
+	.processOverlap-video {
 		right: -20px !important;
 	}
 }
+
 @media (min-width: 767px) {
-	.processOverlap-video{
+	.processOverlap-video {
 		right: 0 !important;
 	}
 }
 
-@media (min-width: 1024px){
-	.small-service-container{
-		article{
-			&:nth-child(odd){
+@media (min-width: 1024px) {
+	.small-service-container {
+		article {
+			&:nth-child(odd) {
 				position: relative;
 				top: -60px;
 			}
-			&:nth-child(3){
+
+			&:nth-child(3) {
 				position: relative;
 				top: -30px;
 			}
-			&:nth-child(4){
+
+			&:nth-child(4) {
 				position: relative;
 				top: 10px;
 			}
 		}
+	}
+}
+
+.Community-text {
+	background: #CFFE71;
+	background: linear-gradient(to right, #D0FF71 47%, #1DAD92 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.upDownAnimation{
+	transform: translateY(0);
+	animation: upDownAnimation 3s linear infinite;
+}
+
+@keyframes upDownAnimation {
+	0%,100% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(20%);
 	}
 }
