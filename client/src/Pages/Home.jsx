@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Images, Videos } from "../assets/Index";
 import { Link } from "react-router-dom";
-import { FaCheckCircle, FaMapPin } from "react-icons/fa";
-import { FaPlay, FaArrowRight } from "react-icons/fa6";
+import { FaCheckCircle, FaMapPin, FaLinkedin, FaInstagram, FaFacebookSquare, FaYoutube } from "react-icons/fa";
+import { FaPlay, FaArrowRight, FaXTwitter } from "react-icons/fa6";
 import { IoMdClose, IoIosMail } from "react-icons/io";
 import BlogItem from "../Components/BlogItem";
 import { IoCall } from "react-icons/io5";
@@ -10,6 +10,7 @@ import { IoCall } from "react-icons/io5";
 const Home = () => {
 
     const [processFlowFAQ, setProcessFlowFAQ] = useState(1);
+    const [year, setYear] = useState(new Date().getFullYear())
 
     const ServicesArray = [
         [
@@ -459,8 +460,34 @@ const Home = () => {
 
 
             <footer className="max-w-screen w-full dark:bg-dark-bg px-4 py-10">
-                <section className="container mx-auto bg-[#1A1B1E] px-20 pt-16 pb-10 rounded-b-2xl">
-                    <div className="">
+                <section className="container mx-auto bg-[#1A1B1E] px-20 pt-16 pb-10 rounded-b-2xl relative">
+
+                    <div className="absolute top-0 left-0 w-14 h-60 bg-dark-bg z-[1]">
+                            <span className="absolute bottom-[0.75rem] left-[28px] w-[1.75rem] bg-[#1A1B1E] h-16 -z-[1]"></span>
+                            <span className="absolute bottom-[2.25rem] left-0 w-full bg-dark-bg h-10 rounded-br-full -z-[1]"></span>
+                            <span className="absolute bottom-0 left-0 w-full bg-[#1A1B1E] h-10 rounded-tl-full -z-[1]"></span>
+
+                        <article className="w-full flex flex-col items-center justify-start h-full gap-2 z-[2] pt-2">
+                            <Link className="w-7 h-7 bg-dark-primary rounded-full flex items-center justify-center text-black" to={''}>
+                                <FaLinkedin />
+                            </Link>
+                            <Link className="w-7 h-7 bg-dark-primary rounded-full flex items-center justify-center text-black" to={''}>
+                                <FaInstagram />
+                            </Link>
+                            <Link className="w-7 h-7 bg-dark-primary rounded-full flex items-center justify-center text-black" to={''}>
+                                <FaFacebookSquare />
+                            </Link>
+                            <Link className="w-7 h-7 bg-dark-primary rounded-full flex items-center justify-center text-black" to={''}>
+                                <FaYoutube />
+                            </Link>
+                            <Link className="w-7 h-7 bg-dark-primary rounded-full flex items-center justify-center text-black" to={''}>
+                                <FaXTwitter />
+                            </Link>
+                        </article>
+                    </div>
+
+
+                    <div className="flex items-start justify-start flex-col gap-12">
                         <section className="flex items-start justify-between gap-10">
                             <div className="max-w-[30%] w-full">
                                 <h1 className="text-5xl text-white mb-6">Do you like what you see?</h1>
@@ -511,7 +538,17 @@ const Home = () => {
                                 </ul>
                             </article>
                         </section>
-                        <section></section>
+                        <section className="flex items-center justify-between gap-10 w-full">
+                            <article className="flex items-center justify-between gap-8">
+                                <img className="w-[180px]" src={Images.BrandWhite} alt="" />
+                                <p className="text-white opacity-50 text-sm">©{year} Brand Particle Pvt Ltd 2024</p>
+                            </article>
+                            <article className="text-white opacity-50 flex items-center justify-end text-sm min-w-[650px]">
+                                <Link to={'#'} className="pr-4">Brand Creators From Kolkata</Link>
+                                <Link to={'#'} className="border-l border-r border-slate-400 px-4">All Rights Reserved</Link>
+                                <Link to={'#'} className="pl-4">Privacy Policy(you really care?)</Link>
+                            </article>
+                        </section>
                     </div>
                 </section>
             </footer>
