@@ -228,13 +228,13 @@ const Home = () => {
 
             <section className="max-w-screen w-full dark:bg-dark-bg py-20 px-4 sm:px-10 2xl:px-0">
                 <section className="container mx-auto">
-                    <div className="w-fit sm:ml-auto sm:mr-0 xl:mr-20 flex flex-col gap-5 mb-10 lg:mb-24">
+                    <div className="w-fit sm:ml-auto sm:mr-0 xl:mr-36 flex flex-col gap-5 mb-10 lg:mb-24">
                         <article className="flex items-center justify-start gap-4">
                             <span className="w-2 h-2 bg-white rounded-full"></span>
-                            <h4 className="text-base custom-sm:text-xl sm:text-base lg:text-xl text-white font-light">Our Expertise</h4>
+                            <h4 className="text-base text-white font-light">Our Expertise</h4>
                         </article>
                         <article>
-                            <h2 className="text-dark-primary text-3xl custom-sm:text-5xl sm:text-3xl lg:text-5xl font-semibold leading-[1.2] capitalize">We Are the Giants <br /> of this Field</h2>
+                            <h2 className="text-dark-primary max-w-[450px] custom-line-height-14 text-3xl custom-sm:text-5xl sm:text-3xl lg:text-5xl font-extrabold capitalize">We Are the Giants of this Field</h2>
                         </article>
                     </div>
                     <section className="flex flex-col sm:flex-row justify-start items-start gap-10 2xl:gap-20 relative main-service-conatiner">
@@ -271,8 +271,8 @@ const Home = () => {
                                                             </div>
                                                             <div className="text-white w-full flex flex-col items-start justify-start gap-2">
                                                                 <h1 className="text-2xl custom-sm:text-4xl sm:text-2xl lg:text-4xl font-semibold">{item.name}</h1>
-                                                                <div className="flex items-start lg:items-center justify-start gap-2">
-                                                                    <span className="w-2 h-2 rounded-full bg-white block mt-2"></span>
+                                                                <div className="flex items-start justify-start gap-2">
+                                                                    <span className="w-2 h-2 rounded-full bg-white block mt-1"></span>
                                                                     <p className="font-light text-sm sm:text-xs lg:text-sm w-[95%]">{item.description}</p>
                                                                 </div>
                                                             </div>
@@ -289,19 +289,19 @@ const Home = () => {
                 </section>
             </section>
 
-            <section className="max-w-screen w-full dark:bg-dark-bg py-20 px-4 md:px-0 z-[1]">
+            <section className="max-w-screen w-full dark:bg-dark-bg pt-10 pb-5 px-4 md:px-0 z-[1]">
                 <section className="relative container mx-auto flex flex-col items-center justify-center">
                     <article>
-                        <h1 className="portfolio-min-text leading-[1] text-9xl custom-sm:text-[12rem] sm:text-[15rem] md:text-[20rem] xl:text-[25rem] font-black">100+</h1>
+                        <h1 className="portfolio-min-text opacity-15 leading-[1] text-9xl custom-sm:text-[12rem] sm:text-[15rem] md:text-[20rem] xl:text-[28rem] font-black">100+</h1>
                     </article>
-                    <article className="relative -top-[40px] custom-sm:-top-[60px] sm:-top-[80px] md:-top-[90px] flex items-center justify-center flex-col gap-4 sm:gap-6 md:gap-8 max-w-[450px] sm:max-w-[500px] md:max-w-[800px] xl:max-w-[900px] w-full">
-                        <h1 className="text-center text-3xl custom-sm:text-4xl sm:text-6xl md:text-7xl xl:text-8xl text-dark-primary font-semibold">We are <span className="relative z-[1] before:absolute before:content-[''] before:bg-[rgba(255,255,255,0.1)] before:w-full before:bottom-2 before:h-3 md:before:h-5 md:before:bottom-4 before:-z-[1]">the MVPs</span> of this game.</h1>
-                        <h3 className="text-lg custom-sm:text-xl sm:text-2xl md:text-4xl xl:text-5xl font-semibold text-[rgba(255,255,255,63%)] text-center">Game-Changers & Always Winning</h3>
-                        <p className="text-center text-white text-sm sm:text-base md:text-xl xl:text-2xl md:my-3 xl:my-5">We have helped 100+ biz owners like you transform their businesses with our advanced funnel strategies that convert like crazy.</p>
-                        <div className="flex items-center justify-between flex-col custom-sm:flex-row gap-5 custom-sm:gap-2 sm:gap-3 md:gap-10 w-full">
-                            <article className="flex items-center justify-center gap-2 text-white text-xs sm:text-sm md:text-lg xl:text-xl"><span className="text-base md:text-xl xl:text-2xl"><FaCheckCircle /></span>Advanced Funnels</article>
-                            <article className="flex items-center justify-center gap-2 text-white text-xs sm:text-sm md:text-lg xl:text-xl"><span className="text-base md:text-xl xl:text-2xl"><FaCheckCircle /></span>Smart Ads</article>
-                            <article className="flex items-center justify-center gap-2 text-white text-xs sm:text-sm md:text-lg xl:text-xl"><span className="text-base md:text-xl xl:text-2xl"><FaCheckCircle /></span>High-converting Webinars</article>
+                    <article className="relative -top-[40px] custom-sm:-top-[60px] sm:-top-[80px] md:-top-[190px] flex items-center justify-center flex-col gap-4 sm:gap-6 md:gap-8 max-w-[450px] sm:max-w-[500px] md:max-w-[800px] xl:max-w-[950px] w-full">
+                        <h1 className="text-center text-3xl custom-sm:text-4xl sm:text-6xl md:text-7xl text-dark-primary font-extrabold">We are the <span className="relative z-[1] before:absolute before:content-[''] before:bg-[rgba(255,255,255,0.1)] before:w-full before:bottom-2 before:h-3 md:before:h-5 md:before:bottom-4 before:-z-[1] Community-text">Ultimate MVPs</span> of this game.</h1>
+                        <h3 className="text-lg custom-sm:text-xl sm:text-2xl md:text-4xl xl:text-6xl font-semibold text-[rgba(255,255,255,33%)] text-center">Unstoppable & Always Winning</h3>
+                        <p className="text-center text-white text-sm sm:text-lg custom-font-eina md:my-3 xl:my-5 text-[rgba(255,255,255,0.5)]"><span className="text-white">We have helped 100+ biz owners</span> like you transform their businesses with our advanced funnel strategies that convert like crazy. Our clients thank us as we ensure that they enjoy a 10X growth (sometimes even more) in their income without putting any extra ounce of effort.</p>
+                        <div className="flex items-center justify-evenly flex-col custom-sm:flex-row gap-5 custom-sm:gap-2 sm:gap-3 md:gap-10 w-full">
+                            <article className="flex items-center justify-center gap-2 text-white text-xs sm:text-base"><span className="text-lg"><FaCheckCircle /></span>Advanced Funnels</article>
+                            <article className="flex items-center justify-center gap-2 text-white text-xs sm:text-base"><span className="text-lg"><FaCheckCircle /></span>Smart Ads</article>
+                            <article className="flex items-center justify-center gap-2 text-white text-xs sm:text-base"><span className="text-lg"><FaCheckCircle /></span>High-converting Webinars</article>
                         </div>
                     </article>
                 </section>
