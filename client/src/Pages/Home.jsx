@@ -294,9 +294,10 @@ const Home = () => {
                     <article>
                         <h1 className="portfolio-min-text opacity-15 leading-[1] text-9xl custom-sm:text-[12rem] sm:text-[15rem] md:text-[20rem] xl:text-[28rem] font-black">100+</h1>
                     </article>
-                    <article className="relative -top-[40px] custom-sm:-top-[60px] sm:-top-[80px] md:-top-[190px] flex items-center justify-center flex-col gap-4 sm:gap-6 md:gap-8 max-w-[450px] sm:max-w-[500px] md:max-w-[800px] xl:max-w-[950px] w-full">
-                        <h1 className="text-center text-3xl custom-sm:text-4xl sm:text-6xl md:text-7xl text-dark-primary font-extrabold">We are the <span className="relative z-[1] before:absolute before:content-[''] before:bg-[rgba(255,255,255,0.1)] before:w-full before:bottom-2 before:h-3 md:before:h-5 md:before:bottom-4 before:-z-[1] Community-text">Ultimate MVPs</span> of this game.</h1>
-                        <h3 className="text-lg custom-sm:text-xl sm:text-2xl md:text-4xl xl:text-6xl font-semibold text-[rgba(255,255,255,33%)] text-center">Unstoppable & Always Winning</h3>
+                    <article className="relative -top-[40px] custom-sm:-top-[60px] sm:-top-[80px] md:-top-[170px] flex items-center justify-center flex-col gap-4 sm:gap-6 md:gap-8 max-w-[450px] sm:max-w-[500px] md:max-w-[800px] xl:max-w-[950px] w-full">
+                        <p className="uppercase custom-font-eina text-white tracking-widest text-base opacity-50">Experience 10X Boost in Revenue</p>
+                        <h1 className="text-center text-3xl custom-sm:text-4xl sm:text-6xl md:text-7xl text-dark-primary font-extrabold">We are the <span className="relative z-[1] before:absolute before:content-[''] before:bg-[rgba(255,255,255,0.1)] before:w-full before:bottom-2 before:h-3 md:before:h-5 md:before:bottom-3 hover:before:h-[65px] before:transition-all before:duration-300 before:-z-[1] Community-text">Ultimate MVPs</span> of this game.</h1>
+                        <h3 className="text-lg custom-sm:text-xl sm:text-2xl md:text-4xl xl:text-6xl font-extrabold text-[rgba(255,255,255,33%)] text-center">Unstoppable & Always Winning</h3>
                         <p className="text-center text-white text-sm sm:text-lg custom-font-eina md:my-3 xl:my-5 text-[rgba(255,255,255,0.5)]"><span className="text-white">We have helped 100+ biz owners</span> like you transform their businesses with our advanced funnel strategies that convert like crazy. Our clients thank us as we ensure that they enjoy a 10X growth (sometimes even more) in their income without putting any extra ounce of effort.</p>
                         <div className="flex items-center justify-evenly flex-col custom-sm:flex-row gap-5 custom-sm:gap-2 sm:gap-3 md:gap-10 w-full">
                             <article className="flex items-center justify-center gap-2 text-white text-xs sm:text-base"><span className="text-lg"><FaCheckCircle /></span>Advanced Funnels</article>
@@ -307,19 +308,19 @@ const Home = () => {
                 </section>
             </section>
 
-            <section className="max-w-screen w-full dark:bg-dark-bg py-20 px-4">
+            <section className="max-w-screen w-full dark:bg-dark-bg pt-0 pb-10 px-4">
                 <div className="container mx-auto flex flex-col items-start justify-start gap-10 xl:gap-16">
                     <section className="flex sm:items-center justify-between flex-col sm:flex-row gap-8 custom-sm:gap-10 sm:gap-5 lg:gap-10 w-full">
                         <article className="w-fit sm:w-1/2 md:w-fit">
-                            <h1 className="text-5xl custom-sm:text-7xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-white font-bold">How</h1>
-                            <h1 className="processFlow-main-text text-5xl custom-sm:text-7xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold relative z-[1] before:absolute before:content-[''] before:bg-[#D0FF71] before:opacity-[37%] before:w-full before:bottom-1 sm:before:bottom-0 xl:before:bottom-1 before:h-3 sm:before:h-2 md:before:h-3 before:-z-[1]">We Process.</h1>
+                            <h1 className="text-5xl custom-sm:text-7xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-white font-extrabold">How</h1>
+                            <h1 className="processFlow-main-text text-5xl custom-sm:text-7xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-extrabold relative z-[1] before:absolute before:content-[''] hover:before:h-[82px] before:transition-all before:duration-300 before:bg-[#D0FF71] before:opacity-[37%] before:w-full before:bottom-1 sm:before:bottom-0 xl:before:bottom-1 before:h-3 sm:before:h-2 md:before:h-3 before:-z-[1]">We Process.</h1>
                         </article>
                         <article className="w-full sm:w-1/2 lg:max-w-[500px] flex items-start justify-start flex-col gap-2 md:gap-4">
                             <div className="flex items-center justify-start gap-4">
                                 <span className="flex items-center justify-center w-10 h-10 custom-sm:w-12 custom-sm:h-12 sm:h-8 sm:w-8 md:w-10 md:h-10 xl:w-12 xl:h-12 rounded-full bg-gradient-to-r from-[#CCFB73] to-[#8EB998]">
                                     <FaPlay className="text-white text-sm custom-sm:text-base sm:text-xs md:text-sm" />
                                 </span>
-                                <h3 className="text-white text-xl custom-sm:text-2xl sm:text-base">See How It Works</h3>
+                                <h3 className="text-white text-xl custom-sm:text-2xl sm:text-base custom-font-eina">See How It Works</h3>
                             </div>
                             <div>
                                 <p className="text-white text-base custom-sm:text-lg sm:text-xs md:text-sm xl:text-base"><span className="text-dark-primary">Say goodbye to old fashioned ways to get clients or to sell your courses.</span>
