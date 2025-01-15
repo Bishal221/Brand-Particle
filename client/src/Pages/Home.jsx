@@ -313,7 +313,7 @@ const Home = () => {
                     <section className="flex sm:items-center justify-between flex-col sm:flex-row gap-8 custom-sm:gap-10 sm:gap-5 lg:gap-10 w-full">
                         <article className="w-fit sm:w-1/2 md:w-fit">
                             <h1 className="text-5xl custom-sm:text-7xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-white font-extrabold">How</h1>
-                            <h1 className="processFlow-main-text text-5xl custom-sm:text-7xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-extrabold relative z-[1] before:absolute before:content-[''] hover:before:h-[82px] before:transition-all before:duration-300 before:bg-[#D0FF71] before:opacity-[37%] before:w-full before:bottom-1 sm:before:bottom-0 xl:before:bottom-1 before:h-3 sm:before:h-2 md:before:h-3 before:-z-[1]">We Process.</h1>
+                            <h1 className="processFlow-main-text text-5xl custom-sm:text-7xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-extrabold relative z-[1] before:absolute before:content-[''] hover:before:h-[82px] before:transition-all before:duration-300 before:bg-[#D0FF71] before:opacity-[37%] before:w-full before:bottom-1 sm:before:bottom-0 xl:before:bottom-1 before:h-3 hover:before:opacity-10 sm:before:h-2 md:before:h-3 before:-z-[1]">We Process.</h1>
                         </article>
                         <article className="w-full sm:w-1/2 lg:max-w-[500px] flex items-start justify-start flex-col gap-2 md:gap-4">
                             <div className="flex items-center justify-start gap-4">
@@ -330,7 +330,7 @@ const Home = () => {
                     </section>
                     <section className="processFlow-main-container w-full rounded-lg min-h-[450px] md:min-h-[500px] lg:min-h-[700px] h-auto flex items-start justify-between flex-col sm:flex-row gap-5 lg:gap-10 p-8 custom-sm:p-10 sm:p-6 md:p-10 lg:p-16">
                         <article className="w-full">
-                            <h1 className="text-[#1A1A1A] text-4xl custom-sm:text-5xl sm:text-3xl lg:text-5xl xl:text-6xl max-w-[500px] font-bold">Know Our Killer Game-Plan.</h1>
+                            <h1 className="text-[#1A1A1A] custom-font-eina text-4xl custom-sm:text-5xl sm:text-3xl lg:text-5xl xl:text-6xl max-w-[500px] font-bold">Know Our Killer Game-Plan.</h1>
                             <section className="mt-10 sm:mt-5 lg:mt-10 flex items-start justify-start flex-col gap-8">
                                 {
                                     ProcessFlowFAQ.map((faq, index) => {
@@ -341,7 +341,7 @@ const Home = () => {
                                                         setProcessFlowFAQ(faq.id)
                                                     }} className="flex custom-sm:items-center justify-start gap-3 custom-sm:gap-5 sm:gap-3 lg:gap-5">
                                                         <span className={`${processFlowFAQ === faq.id ? "rotate-0" : "rotate-45"} text-white custom-sm:text-xl sm:text-lg lg:text-xl transition-all mt-1 custom-sm:mt-0 duration-300`}><IoMdClose /></span>
-                                                        <p className="text-white text-left text-lg custom-sm:text-xl sm:text-base lg:text-lg font-semibold">{faq.heading}</p>
+                                                        <p className="text-white custom-font-eina text-left text-lg custom-sm:text-xl sm:text-base lg:text-lg font-semibold">{faq.heading}</p>
                                                     </button>
                                                     <div className={`${processFlowFAQ === faq.id ? "max-h-[300px] h-auto transition-[max-height] duration-300" : "max-h-0 h-auto transition-[max-height] duration-300"} overflow-hidden `}>
                                                         <p className="pt-3 pl-8 custom-sm:pl-10 sm:pl-7 lg:pt-4 lg:pl-10 text-base sm:text-xs md:text-sm lg:text-base text-white font-light" dangerouslySetInnerHTML={{ __html: faq.content }}></p>
@@ -373,10 +373,10 @@ const Home = () => {
                 <div className="container mx-auto">
                     <section className="flex flex-col md:flex-row items-start md:items-end justify-between gap-5 sm:gap-8 md:gap-5 xl:gap-10">
                         <article className="w-full md:w-1/2">
-                            <h1 className="text-3xl custom-sm:text-4xl sm:text-6xl md:text-3xl lg:text-5xl xl:text-6xl font-bold text-dark-primary">Relax, We <br /> Manage <span className="relative z-[1] before:absolute before:content-[''] before:bg-[#D0FF71] before:opacity-[20%] before:w-full before:bottom-2 before:h-3 sm:before:h-2 md:before:h-3 before:-z-[1]">Everything!</span></h1>
+                            <h1 className="text-3xl font-extrabold custom-sm:text-4xl sm:text-6xl md:text-3xl lg:text-5xl xl:text-7xl text-dark-primary">Relax, We <br /> Manage <span className="relative z-[1] before:absolute before:content-[''] before:bg-[#D0FF71] before:opacity-[20%] hover:before:opacity-10 before:transition-all before:duration-300 hover:before:h-[70px] before:w-full before:bottom-2 before:h-3 sm:before:h-2 md:before:h-3 before:-z-[1]">Everything!</span></h1>
                         </article>
                         <article className="md:max-w-[50%] lg:max-w-[400px] xl:max-w-[500px] w-full">
-                            <p className="text-white text-sm custom-sm:text-base sm:text-xl md:text-base lg:text-lg xl:text-xl">Our team of digital warriors will do everything for you so that you can focus on what you do the best — Running your business.</p>
+                            <p className="text-white text-sm custom-sm:text-base sm:text-xl md:text-base lg:text-lg">Our team of digital warriors will do everything for you so that you can focus on what you do the best — Running your business.</p>
                         </article>
                     </section>
                     <section className="mt-12 lg:mt-32 flex items-start md:items-center justify-evenly gap-y-8 gap-x-10 custom-sm:gap-5 small-service-container flex-wrap lg:flex-nowrap relative">
