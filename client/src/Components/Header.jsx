@@ -88,10 +88,10 @@ const Header = () => {
               <DarkModeSwitchComp />
             </div>
             <div className='hidden lg:flex items-center justify-end group select-none'>
-              <Link className='py-3 text-lg px-6 bg-dark-primary rounded-full group-hover:mr-1 -mr-3 transition-all duration-300 font-medium leading-none'>
+              <Link className='py-2 text-base px-6 bg-dark-primary rounded-full group-hover:mr-1 -mr-3 transition-all duration-300 font-medium leading-none'>
                 Schedule a call
               </Link>
-              <span className='bg-dark-primary flex items-center justify-center text-base group-hover:rotate-0 transition-all duration-300 -rotate-45 rounded-full w-10 h-10'>
+              <span className='bg-dark-primary flex items-center justify-center text-sm group-hover:rotate-0 transition-all duration-300 -rotate-45 rounded-full w-8 h-8'>
                 <FaArrowRight />
               </span>
             </div>

@@ -166,7 +166,7 @@ const Home = () => {
             <section className="max-w-screen w-full min-h-screen dark:bg-dark-bg overflow-hidden pb-16 sm:pb-24">
                 <section className="mt-[120px] lg:mt-[150px] container mx-auto flex items-start justify-start flex-col gap-8 relative px-4">
                     <article className="w-full relative z-[2]">
-                        <h1 className="text-dark-primary text-4xl custom-sm:text-5xl md:text-7xl lg:text-5xl xl:text-6xl 2xl:text-[4.05rem] leading-[1.1] font-semibold max-w-[900px] lg:max-w-[700px] xl:max-w-[900px] 2xl:max-w-[950px]">We Help Clients Turn their Biz into a Revenue Machine</h1>
+                        <h1 className="text-dark-primary text-4xl custom-sm:text-5xl md:text-7xl lg:text-5xl xl:text-6xl 2xl:text-[4.05rem] leading-[1.1] custom-font-eina max-w-[900px] lg:max-w-[700px] xl:max-w-[900px] 2xl:max-w-[950px]">We Help Clients Turn their Biz into a Revenue Machine</h1>
                     </article>
                     <article className="hidden lg:block w-full max-w-[420px] custom-lg:max-w-[490px] xl:max-w-[530px] relative">
                         <video
@@ -208,20 +208,20 @@ const Home = () => {
             </section>
 
             {/* About Us Code Here */}
-            <section className="max-w-screen w-full dark:bg-dark-bg p-16 sm:py-20 md:py-[9rem] lg:py-[12rem] md:px-0 px-4">
+            <section className="max-w-screen w-full dark:bg-dark-bg p-16 sm:py-24 md:px-0 px-4">
                 <section className="relative container mx-auto flex items-center justify-center flex-col gap-3 sm:gap-6 z-[2]">
-                    <h1 className="about-us-min-text text-[11rem] custom-sm:text-[12rem] sm:text-[18rem] md:text-[23rem] lg:text-[30rem] font-black opacity-15 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[1]">WIN</h1>
+                    <h1 className="about-us-min-text text-[11rem] custom-sm:text-[12rem] sm:text-[18rem] md:text-[23rem] lg:text-[30rem] -tracking-[1.75rem] font-black opacity-15 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[1]">WIN</h1>
                     <article className="z-[2]">
-                        <h4 className="text-sm text-center sm:text-base text-white backdrop-blur-md uppercase bg-[rgba(110,127,153,0.11)] py-2 px-6 rounded-3xl">Why Biz Owners Love Brand Particle?</h4>
+                        <h4 className="text-xs text-center text-white backdrop-blur-md uppercase bg-[rgba(110,127,153,0.11)] py-2 px-6 rounded-3xl">Why Biz Owners Love Brand Particle?</h4>
                     </article>
-                    <article className="max-w-full sm:max-w-[600px] lg:max-w-[860px] w-full z-[2]">
+                    <article className="max-w-[700px] w-full z-[2]">
                         <div className="relative">
-                            <img className="w-20 sm:w-32 absolute top-20 sm:-top-3 sm:-left-24 lg:-top-8 lg:-left-20" src={Images.AboutUsElement1} alt="" />
+                            <img className="upDownAnimation w-20 sm:w-32 absolute top-20 sm:-top-3 sm:-left-24 lg:-top-16 lg:-left-36" src={Images.AboutUsElement1} alt="" />
                         </div>
-                        <h2 className="text-white text-[1.25rem] custom-sm:text-[1.5rem] sm:text-[1.5rem] leading-[1.2] text-center font-medium">We love doing epic sh*t!<span className="text-dark-primary"> Our team of digital warriors take up all your stresses and help you earn 15-20 lakhs every single month.</span></h2>
+                        <h2 className="text-white font-semibold text-[1.25rem] custom-sm:text-[1.5rem] sm:text-[1.75rem] leading-[1.2] text-center">We love doing epic sh*t!<span className="text-dark-primary"> Our team of digital warriors take up all your stresses and help you earn 15-20 lakhs every single month.</span></h2>
                     </article>
-                    <article className="pt-8 sm:pt-6 z-[2]">
-                        <Link to={'#'} className="px-11 py-2 rounded-[100px] bg-dark-primary">Let’s Boost Your Biz</Link>
+                    <article className="pt-4 z-[2]">
+                        <Link to={'#'} className="px-11 py-[6px] rounded-[100px] bg-dark-primary">Let’s Boost Your Biz</Link>
                     </article>
                 </section>
             </section>
@@ -292,7 +292,7 @@ const Home = () => {
             <section className="max-w-screen w-full dark:bg-dark-bg py-20 px-4 md:px-0 z-[1]">
                 <section className="relative container mx-auto flex flex-col items-center justify-center">
                     <article>
-                        <h1 className="portfolio-min-text leading-[1] text-9xl custom-sm:text-[12rem] sm:text-[15rem] md:text-[20rem] xl:text-[25rem] font-bold">100+</h1>
+                        <h1 className="portfolio-min-text leading-[1] text-9xl custom-sm:text-[12rem] sm:text-[15rem] md:text-[20rem] xl:text-[25rem] font-black">100+</h1>
                     </article>
                     <article className="relative -top-[40px] custom-sm:-top-[60px] sm:-top-[80px] md:-top-[90px] flex items-center justify-center flex-col gap-4 sm:gap-6 md:gap-8 max-w-[450px] sm:max-w-[500px] md:max-w-[800px] xl:max-w-[900px] w-full">
                         <h1 className="text-center text-3xl custom-sm:text-4xl sm:text-6xl md:text-7xl xl:text-8xl text-dark-primary font-semibold">We are <span className="relative z-[1] before:absolute before:content-[''] before:bg-[rgba(255,255,255,0.1)] before:w-full before:bottom-2 before:h-3 md:before:h-5 md:before:bottom-4 before:-z-[1]">the MVPs</span> of this game.</h1>
