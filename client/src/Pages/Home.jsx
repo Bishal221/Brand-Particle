@@ -216,7 +216,7 @@ const Home = () => {
                     </article>
                     <article className="max-w-[700px] w-full z-[2]">
                         <div className="relative">
-                            <img className="upDownAnimation w-20 sm:w-32 absolute top-20 sm:-top-3 sm:-left-24 lg:-top-16 lg:-left-36" src={Images.AboutUsElement1} alt="" />
+                            <img className="animate-bounce w-20 sm:w-32 absolute top-20 sm:-top-3 sm:-left-24 lg:-top-16 lg:-left-36" src={Images.AboutUsElement1} alt="" />
                         </div>
                         <h2 className="text-white font-semibold text-[1.25rem] custom-sm:text-[1.5rem] sm:text-[1.75rem] leading-[1.2] text-center">We love doing epic sh*t!<span className="text-dark-primary"> Our team of digital warriors take up all your stresses and help you earn 15-20 lakhs every single month.</span></h2>
                     </article>
@@ -255,7 +255,7 @@ const Home = () => {
                                                                     {
                                                                         item.tags.map((tag, i) => {
                                                                             return (
-                                                                                <p key={i} className="text-white rounded-full backdrop-blur-md text-xs py-2 px-4 uppercase bg-[rgba(110,127,153,0.11)]">
+                                                                                <p key={i} className="text-white rounded-full backdrop-blur-md text-xs py-2 px-4 lowercase bg-[rgba(110,127,153,0.11)]">
                                                                                     {tag}
                                                                                 </p>
                                                                             )
@@ -446,14 +446,14 @@ const Home = () => {
                             <div className="absolute -right-32 lg:-right-40 -top-24 upDownAnimation">
                                 <img src={Images.FlotingElement} alt="" />
                             </div>
-                            <h1 className="text-5xl custom-sm:text-6xl sm:text-7xl lg:text-8xl text-white text-center font-extrabold">We <span className="Community-text relative z-[1] before:absolute before:content-[''] before:bg-[#D0FF71] before:opacity-[15%] before:w-full before:bottom-2 before:h-3 md:before:h-5 md:before:bottom-4 before:-z-[1]">Don't Sell</span>, <br /> We Discuss</h1>
+                            <h1 className="text-5xl custom-sm:text-6xl sm:text-7xl lg:text-8xl text-white text-center font-extrabold">We <span className="Community-text relative z-[1] before:absolute before:content-[''] before:bg-[#D0FF71] before:opacity-[15%] before:w-full before:bottom-2 before:h-3 md:before:h-5 hover:before:h-[85px] hover:before:transition-all hover:before:duration-300 hover:before:opacity-10 md:before:bottom-4 before:-z-[1]">Don't Sell</span>, <br /> We Discuss</h1>
                         </article>
                         <article className="my-5 lg:my-0">
                             <p className="text-white text-center opacity-70 text-sm custom-sm:text-base lg:text-xl font-light max-w-[450px] lg:max-w-[550px]">Want to skyrocket your business? Book a call with us, and let's see if we're the perfect fit to work together.
                             </p>
                         </article>
                         <article>
-                            <Link to={''} className="text-white text-sm custom-sm:text-base flex items-center justify-center gap-4 py-2 custom-sm:py-4 px-6 custom-sm:px-10 border-2 border-white rounded-full">Book A Call With Us <span><IoCall /></span></Link>
+                            <Link to={''} className="text-white text-sm custom-sm:text-base flex items-center justify-center gap-4 py-2 px-6 custom-sm:px-10 border-2 border-white rounded-full">Book A Call With Us <span><IoCall /></span></Link>
                         </article>
                     </section>
                 </div>
@@ -494,10 +494,10 @@ const Home = () => {
                                 <h1 className="text-5xl text-white mb-6">Do you like what you see?</h1>
                                 <article className="flex items-center justify-between gap-5">
                                     <div className='hidden lg:flex items-center justify-start group select-none'>
-                                        <Link className='py-3 text-lg px-6 bg-dark-primary rounded-full group-hover:mr-1 -mr-3 transition-all duration-300 font-medium leading-none'>
+                                        <Link className='py-2 text-base px-6 bg-dark-primary rounded-full group-hover:mr-1 -mr-3 transition-all duration-300 font-medium leading-none'>
                                             Schedule a call
                                         </Link>
-                                        <span className='bg-dark-primary flex items-center justify-center text-base group-hover:rotate-0 transition-all duration-300 -rotate-45 rounded-full w-10 h-10'>
+                                        <span className='bg-dark-primary text-sm flex items-center justify-center group-hover:rotate-0 transition-all duration-300 -rotate-45 rounded-full w-8 h-8'>
                                             <FaArrowRight />
                                         </span>
                                     </div>
