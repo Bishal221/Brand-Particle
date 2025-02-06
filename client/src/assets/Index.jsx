@@ -12,6 +12,8 @@ import WebinarFunnel from "./Images/WebinarFunnel.png";
 import Design from "./Images/Design.png";
 import Social from "./Images/Social.png";
 import Marketing from "./Images/Marketing.png";
+import RightSide from "./Images/rightside.png";
+import LeftSide from "./Images/leftside.png";
 import AboutUsElement1 from "./Images/about-us-element1.png";
 import Post1 from "./Images/post1.png";
 import NetBG from "./Images/netbg.png";
@@ -39,6 +41,8 @@ export const Images = {
     NetBG,
     FlotingElement,
     GoogleRating,
+    RightSide,
+    LeftSide,
 };
 
 export const Videos = {

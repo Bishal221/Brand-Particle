@@ -6,7 +6,7 @@ import { FaPlay, FaArrowRight, FaXTwitter } from "react-icons/fa6";
 import { IoMdClose, IoIosMail } from "react-icons/io";
 import BlogItem from "../Components/BlogItem";
 import { IoCall } from "react-icons/io5";
-import Footer from "../Components/Footer";
+import BGGradient from "../Components/BGGradient";
 
 const Home = () => {
 
@@ -208,7 +208,15 @@ const Home = () => {
             </section>
 
             {/* About Us Code Here */}
-            <section className="max-w-screen w-full dark:bg-dark-bg pb-8 pt-24 sm:py-24 md:px-0 px-4">
+            
+            <section className="max-w-screen w-full dark:bg-dark-bg pb-8 pt-24 sm:py-24 md:px-0 px-4 relative z-[1]">
+                <BGGradient
+                    width = "600px"
+                    height = "800px"
+                    top = "-120%"
+                    right = "0px"
+                    image = {Images.RightSide}
+                />
                 <section className="relative container mx-auto flex items-center justify-center flex-col gap-3 sm:gap-6 z-[2]">
                     <h1 className="about-us-min-text text-[9rem] custom-sm:text-[12rem] sm:text-[18rem] md:text-[23rem] lg:text-[30rem] sm:-tracking-[1.25rem] font-black opacity-20 sm:opacity-15 absolute top-[-2rem] sm:top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[1]">WIN</h1>
                     <article className="z-[2]">
@@ -457,10 +465,7 @@ const Home = () => {
                         </article>
                     </section>
                 </div>
-            </section>
-
-            <Footer />
-            
+            </section>            
         </>
     );
 };
