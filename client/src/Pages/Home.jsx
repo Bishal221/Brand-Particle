@@ -6,11 +6,11 @@ import { FaPlay, FaArrowRight, FaXTwitter } from "react-icons/fa6";
 import { IoMdClose, IoIosMail } from "react-icons/io";
 import BlogItem from "../Components/BlogItem";
 import { IoCall } from "react-icons/io5";
+import Footer from "../Components/Footer";
 
 const Home = () => {
 
     const [processFlowFAQ, setProcessFlowFAQ] = useState(1);
-    const [year, setYear] = useState(new Date().getFullYear())
 
     const ServicesArray = [
         [
@@ -166,7 +166,7 @@ const Home = () => {
             <section className="max-w-screen w-full min-h-screen dark:bg-dark-bg overflow-hidden pb-16 sm:pb-24">
                 <section className="mt-[120px] lg:mt-[150px] container mx-auto flex items-start justify-start flex-col gap-8 relative px-4">
                     <article className="w-full relative z-[2]">
-                        <h1 className="text-dark-primary text-4xl custom-sm:text-5xl md:text-7xl lg:text-5xl xl:text-6xl 2xl:text-[4.05rem] leading-[1.1] custom-font-eina max-w-[900px] lg:max-w-[700px] xl:max-w-[900px] 2xl:max-w-[950px]">We Help Clients Turn their Biz into a Revenue Machine</h1>
+                        <h1 className="text-dark-primary text-4xl custom-sm:text-5xl md:text-7xl lg:text-5xl tracking-[2px] xl:text-6xl 2xl:text-[3.5rem] font-extrabold max-w-[900px] lg:max-w-[700px] xl:max-w-[900px] 2xl:max-w-[950px]">We Help Clients Turn their Biz into a Revenue Machine</h1>
                     </article>
                     <article className="hidden lg:block w-full max-w-[420px] custom-lg:max-w-[490px] xl:max-w-[530px] relative">
                         <video
@@ -208,9 +208,9 @@ const Home = () => {
             </section>
 
             {/* About Us Code Here */}
-            <section className="max-w-screen w-full dark:bg-dark-bg p-16 sm:py-24 md:px-0 px-4">
+            <section className="max-w-screen w-full dark:bg-dark-bg pb-8 pt-24 sm:py-24 md:px-0 px-4">
                 <section className="relative container mx-auto flex items-center justify-center flex-col gap-3 sm:gap-6 z-[2]">
-                    <h1 className="about-us-min-text text-[11rem] custom-sm:text-[12rem] sm:text-[18rem] md:text-[23rem] lg:text-[30rem] -tracking-[1.75rem] font-black opacity-15 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[1]">WIN</h1>
+                    <h1 className="about-us-min-text text-[9rem] custom-sm:text-[12rem] sm:text-[18rem] md:text-[23rem] lg:text-[30rem] sm:-tracking-[1.25rem] font-black opacity-20 sm:opacity-15 absolute top-[-2rem] sm:top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[1]">WIN</h1>
                     <article className="z-[2]">
                         <h4 className="text-xs text-center text-white backdrop-blur-md uppercase bg-[rgba(110,127,153,0.11)] py-2 px-6 rounded-3xl">Why Biz Owners Love Brand Particle?</h4>
                     </article>
@@ -221,7 +221,7 @@ const Home = () => {
                         <h2 className="text-white font-semibold text-[1.25rem] custom-sm:text-[1.5rem] sm:text-[1.75rem] leading-[1.2] text-center">We love doing epic sh*t!<span className="text-dark-primary"> Our team of digital warriors take up all your stresses and help you earn 15-20 lakhs every single month.</span></h2>
                     </article>
                     <article className="pt-4 z-[2]">
-                        <Link to={'#'} className="px-11 py-[6px] rounded-[100px] bg-dark-primary">Let’s Boost Your Biz</Link>
+                        <Link to={'#'} className="px-11 py-[6px] rounded-[100px] bg-dark-primary">Let's Boost Your Biz</Link>
                     </article>
                 </section>
             </section>
@@ -234,7 +234,7 @@ const Home = () => {
                             <h4 className="text-base text-white font-light">Our Expertise</h4>
                         </article>
                         <article>
-                            <h2 className="text-dark-primary max-w-[450px] custom-line-height-14 text-3xl custom-sm:text-5xl sm:text-3xl lg:text-5xl font-extrabold capitalize">We Are the Giants of this Field</h2>
+                            <h2 className="text-dark-primary max-w-[500px] custom-line-height-14 text-3xl custom-sm:text-5xl sm:text-3xl lg:text-5xl font-extrabold capitalize">We Are the Giants of this Field</h2>
                         </article>
                     </div>
                     <section className="flex flex-col sm:flex-row justify-start items-start gap-10 2xl:gap-20 relative main-service-conatiner">
@@ -292,13 +292,13 @@ const Home = () => {
             <section className="max-w-screen w-full dark:bg-dark-bg pt-10 pb-5 px-4 md:px-0 z-[1]">
                 <section className="relative container mx-auto flex flex-col items-center justify-center">
                     <article>
-                        <h1 className="portfolio-min-text opacity-15 leading-[1] text-9xl custom-sm:text-[12rem] sm:text-[15rem] md:text-[20rem] xl:text-[28rem] font-black">100+</h1>
+                        <h1 className="portfolio-min-text opacity-25 sm:opacity-15 leading-[1] text-[9rem] custom-sm:text-[12rem] sm:text-[15rem] md:text-[20rem] xl:text-[24rem] font-black">100+</h1>
                     </article>
-                    <article className="relative -top-[40px] custom-sm:-top-[60px] sm:-top-[80px] md:-top-[170px] flex items-center justify-center flex-col gap-4 sm:gap-6 md:gap-8 max-w-[450px] sm:max-w-[500px] md:max-w-[800px] xl:max-w-[950px] w-full">
-                        <p className="uppercase custom-font-eina text-white tracking-widest text-base opacity-50">Experience 10X Boost in Revenue</p>
-                        <h1 className="text-center text-3xl custom-sm:text-4xl sm:text-6xl md:text-7xl text-dark-primary font-extrabold">We are the <span className="relative z-[1] before:absolute before:content-[''] before:bg-[rgba(255,255,255,0.1)] before:w-full before:bottom-2 before:h-3 md:before:h-5 md:before:bottom-3 hover:before:h-[65px] before:transition-all before:duration-300 before:-z-[1] Community-text">Ultimate MVPs</span> of this game.</h1>
-                        <h3 className="text-lg custom-sm:text-xl sm:text-2xl md:text-4xl xl:text-6xl font-extrabold text-[rgba(255,255,255,33%)] text-center">Unstoppable & Always Winning</h3>
-                        <p className="text-center text-white text-sm sm:text-lg custom-font-eina md:my-3 xl:my-5 text-[rgba(255,255,255,0.5)]"><span className="text-white">We have helped 100+ biz owners</span> like you transform their businesses with our advanced funnel strategies that convert like crazy. Our clients thank us as we ensure that they enjoy a 10X growth (sometimes even more) in their income without putting any extra ounce of effort.</p>
+                    <article className="relative -top-[40px] custom-sm:-top-[60px] sm:-top-[80px] md:-top-[170px] flex items-center justify-center flex-col gap-4 max-w-[450px] sm:max-w-[500px] xl:max-w-[800px] w-full">
+                        <p className="text-sm uppercase text-center custom-font-eina text-white tracking-widest sm:text-base opacity-50">Experience 10X Boost in Revenue</p>
+                        <h1 className="text-center text-4xl sm:text-6xl md:text-6xl text-dark-primary font-extrabold">We are the <span className="relative z-[1] before:absolute before:content-[''] before:bg-[rgba(6,5,5,0.1)] before:w-full before:bottom-2 before:h-3 md:before:h-2 md:before:bottom-3 hover:before:h-[50px] before:transition-all before:duration-300 before:-z-[1] Community-text">Ultimate MVPs</span> of this game.</h1>
+                        <h3 className="text-lg custom-sm:text-xl sm:text-2xl md:text-4xl xl:text-4xl font-medium sm:font-extrabold text-[rgba(255,255,255,33%)] text-center">Unstoppable & Always Winning</h3>
+                        <p className="text-center text-white text-based custom-font-eina md:my-3 xl:my-5"><span className="text-dark-primary">We have helped 100+ biz owners</span> like you transform their businesses with our advanced funnel strategies that convert like crazy. Our clients thank us as we ensure that they enjoy a 10X growth (sometimes even more) in their income without putting any extra ounce of effort.</p>
                         <div className="flex items-center justify-evenly flex-col custom-sm:flex-row gap-5 custom-sm:gap-2 sm:gap-3 md:gap-10 w-full">
                             <article className="flex items-center justify-center gap-2 text-white text-xs sm:text-base"><span className="text-lg"><FaCheckCircle /></span>Advanced Funnels</article>
                             <article className="flex items-center justify-center gap-2 text-white text-xs sm:text-base"><span className="text-lg"><FaCheckCircle /></span>Smart Ads</article>
@@ -330,7 +330,7 @@ const Home = () => {
                     </section>
                     <section className="processFlow-main-container w-full rounded-lg min-h-[450px] md:min-h-[500px] lg:min-h-[700px] h-auto flex items-start justify-between flex-col sm:flex-row gap-5 lg:gap-10 p-8 custom-sm:p-10 sm:p-6 md:p-10 lg:p-16">
                         <article className="w-full">
-                            <h1 className="text-[#1A1A1A] custom-font-eina text-4xl custom-sm:text-5xl sm:text-3xl lg:text-5xl xl:text-6xl max-w-[500px] font-bold">Know Our Killer Game-Plan.</h1>
+                            <h1 className="text-[#1A1A1A] text-4xl custom-sm:text-5xl sm:text-3xl lg:text-5xl xl:text-6xl max-w-[550px] font-extrabold">Know Our Killer Game-Plan.</h1>
                             <section className="mt-10 sm:mt-5 lg:mt-10 flex items-start justify-start flex-col gap-8">
                                 {
                                     ProcessFlowFAQ.map((faq, index) => {
@@ -459,100 +459,8 @@ const Home = () => {
                 </div>
             </section>
 
-
-            <footer className="max-w-screen w-full dark:bg-dark-bg px-4 py-10">
-                <section className="container mx-auto bg-[#1A1B1E] px-20 pt-16 pb-10 rounded-b-2xl relative">
-
-                    <div className="absolute top-0 left-0 w-14 h-60 bg-dark-bg z-[1]">
-                            <span className="absolute bottom-[0.75rem] left-[28px] w-[1.75rem] bg-[#1A1B1E] h-16 -z-[1]"></span>
-                            <span className="absolute bottom-[2.25rem] left-0 w-full bg-dark-bg h-10 rounded-br-full -z-[1]"></span>
-                            <span className="absolute bottom-0 left-0 w-full bg-[#1A1B1E] h-10 rounded-tl-full -z-[1]"></span>
-
-                        <article className="w-full flex flex-col items-center justify-start h-full gap-2 z-[2] pt-2">
-                            <Link className="w-7 h-7 bg-dark-primary rounded-full flex items-center justify-center text-black" to={''}>
-                                <FaLinkedin />
-                            </Link>
-                            <Link className="w-7 h-7 bg-dark-primary rounded-full flex items-center justify-center text-black" to={''}>
-                                <FaInstagram />
-                            </Link>
-                            <Link className="w-7 h-7 bg-dark-primary rounded-full flex items-center justify-center text-black" to={''}>
-                                <FaFacebookSquare />
-                            </Link>
-                            <Link className="w-7 h-7 bg-dark-primary rounded-full flex items-center justify-center text-black" to={''}>
-                                <FaYoutube />
-                            </Link>
-                            <Link className="w-7 h-7 bg-dark-primary rounded-full flex items-center justify-center text-black" to={''}>
-                                <FaXTwitter />
-                            </Link>
-                        </article>
-                    </div>
-
-
-                    <div className="flex items-start justify-start flex-col gap-12">
-                        <section className="flex items-start justify-between gap-10">
-                            <div className="max-w-[30%] w-full">
-                                <h1 className="text-5xl text-white mb-6">Do you like what you see?</h1>
-                                <article className="flex items-center justify-between gap-5">
-                                    <div className='hidden lg:flex items-center justify-start group select-none'>
-                                        <Link className='py-2 text-base px-6 bg-dark-primary rounded-full group-hover:mr-1 -mr-3 transition-all duration-300 font-medium leading-none'>
-                                            Schedule a call
-                                        </Link>
-                                        <span className='bg-dark-primary text-sm flex items-center justify-center group-hover:rotate-0 transition-all duration-300 -rotate-45 rounded-full w-8 h-8'>
-                                            <FaArrowRight />
-                                        </span>
-                                    </div>
-                                    <div className="max-w-[97px]">
-                                        <img className="w-full" src={Images.GoogleRating} alt="" />
-                                    </div>
-                                </article>
-                            </div>
-                            <article className="w-fit">
-                                <h1 className="text-3xl text-white">Company</h1>
-                                <ul className="flex items-start justify-start flex-col gap-2 text-white mt-5">
-                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>About us</Link></li>
-                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>Culture</Link></li>
-                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>Testimonials</Link></li>
-                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>Process</Link></li>
-                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>FAQ's</Link></li>
-                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>Braning FAQ's</Link></li>
-                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>Blog</Link></li>
-                                </ul>
-                            </article>
-                            <article className="w-fit">
-                                <h1 className="text-3xl text-white">Explore</h1>
-                                <ul className="flex items-start justify-start flex-col gap-2 text-white mt-5">
-                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>Home</Link></li>
-                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>Work</Link></li>
-                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>Services</Link></li>
-                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>Careers</Link></li>
-                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>Sectors</Link></li>
-                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>Hex Test</Link></li>
-                                    <li className="opacity-50 hover:opacity-100 transition-all duration-300"><Link to={"#"}>Contact</Link></li>
-                                </ul>
-                            </article>
-                            <article className="max-w-[20%] w-full">
-                                <h1 className="text-3xl text-white">Get in touch</h1>
-                                <ul className="flex items-start justify-start flex-col gap-2 text-white mt-5 opacity-50">
-                                    <li className="flex items-start gap-3"><span className="mt-1 text-lg"><IoCall /></span>+91 1234567890</li>
-                                    <li className="flex items-start gap-3"><span className="mt-1 text-lg"><IoIosMail /></span>email@email.com</li>
-                                    <li className="flex items-start gap-3"><span className="mt-1 text-lg"><FaMapPin /></span>12/1A/3D Chowbagha Road Kolkata - 700039</li>
-                                </ul>
-                            </article>
-                        </section>
-                        <section className="flex items-center justify-between gap-10 w-full">
-                            <article className="flex items-center justify-between gap-8">
-                                <img className="w-[180px]" src={Images.BrandWhite} alt="" />
-                                <p className="text-white opacity-50 text-sm">©{year} Brand Particle Pvt Ltd 2024</p>
-                            </article>
-                            <article className="text-white opacity-50 flex items-center justify-end text-sm min-w-[650px]">
-                                <Link to={'#'} className="pr-4">Brand Creators From Kolkata</Link>
-                                <Link to={'#'} className="border-l border-r border-slate-400 px-4">All Rights Reserved</Link>
-                                <Link to={'#'} className="pl-4">Privacy Policy(you really care?)</Link>
-                            </article>
-                        </section>
-                    </div>
-                </section>
-            </footer>
+            <Footer />
+            
         </>
     );
 };
