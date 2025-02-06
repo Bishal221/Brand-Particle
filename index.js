@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-// const userRoutes = require('./routes/user');
+const userLogin = require('./routes/login');
 
 const app = express();
 
@@ -10,7 +10,7 @@ app.use(cors());  // You can configure this if needed
 app.use(express.json());  // Built-in body parser for JSON
 
 // Routes
-// app.use('/users', userRoutes);
+app.use('/login', userLogin);
 
 // Sample route for health check
 app.get('/', (req, res) => {

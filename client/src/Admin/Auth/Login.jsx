@@ -1,8 +1,60 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Images } from '../../assets/Index'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Images } from '../../assets/Index';
+import { ToastContainer, toast } from 'react-toastify';
+import config from '../../Config';
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
+
+    const { SERVER_URL } = config.api;
+    const [passwordVisible, setPasswordVisible] = useState(false);
+
+    // State for managing form inputs
+    const [formData, setFormData] = useState({
+        email: '',
+        password: '',
+    });
+
+    const handleInputChange = (e) => {
+        const { id, value } = e.target;
+        // Update state for other inputs
+        setFormData({ ...formData, [id]: value });
+    };
+
+    const handlePasswordVisible = (e) => {
+        e.preventDefault(); // Prevent default button behavior
+        setPasswordVisible(!passwordVisible); // Toggle visibility state
+    };
+
+    const Login = async (e) => {
+        e.preventDefault(); // Prevent default form submission
+
+        const { email, password } = formData;
+
+        try {
+            const response = await fetch(`${SERVER_URL}/login`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, password }),
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                console.log(result);
+                toast.success(result.message);
+            } else {
+                toast.error(result.message);
+            }
+        } catch (error) {
+            console.error('Error signing up:', error);
+            toast.error('Something went wrong. Please try again.');
+        }
+    }
+
+
+
     return (
         <section className="bg-gray-50">
             <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
@@ -14,7 +66,7 @@ const Login = () => {
                         <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">
                             Sign in to your account
                         </h1>
-                        <form className="space-y-4 md:space-y-6" action="#">
+                        <form className="space-y-4 md:space-y-6">
                             <div>
                                 <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900">
                                     Your email
@@ -23,6 +75,7 @@ const Login = () => {
                                     type="email"
                                     name="email"
                                     id="email"
+                                    value={formData.email} onChange={handleInputChange}
                                     className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-[#93c5fd] focus:border-[#2563eb] block w-full p-2.5"
                                     placeholder="name@company.com"
                                     required
@@ -32,14 +85,20 @@ const Login = () => {
                                 <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900">
                                     Password
                                 </label>
-                                <input
-                                    type="password"
-                                    name="password"
-                                    id="password"
-                                    placeholder="••••••••"
-                                    className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-[#93c5fd] focus:border-[#2563eb] block w-full p-2.5"
-                                    required
-                                />
+                                <div className='w-full relative'>
+                                    <input
+                                        type={passwordVisible ? "text" : "password"}
+                                        name="password"
+                                        id="password"
+                                        value={formData.password} onChange={handleInputChange}
+                                        placeholder="••••••••"
+                                        className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-[#93c5fd] focus:border-[#2563eb] block w-full p-2.5"
+                                        required
+                                    />
+                                    <button onClick={(e) => handlePasswordVisible(e)} className='absolute select-none top-1/2 -translate-y-1/2 opacity-50 right-3 pointer'>
+                                            {passwordVisible ? <FaEye /> : <FaEyeSlash />}
+                                        </button>
+                                </div>
                             </div>
                             <div className="flex items-center justify-between">
                                 <div className="flex items-start">
