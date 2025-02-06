@@ -13,7 +13,7 @@ const Footer = () => {
 
 
     return (
-        <footer className="max-w-screen w-full dark:bg-dark-bg px-4 py-10">
+        <footer className="max-w-screen w-full dark:bg-dark-bg px-4 py-10 relative">
             <section className="container mx-auto bg-[#1A1B1E] sm:px-20 px-10 pt-10 sm:pt-16 pb-10 rounded-b-2xl rounded-t-2xl relative">
 
                 <div className="absolute top-0 left-0 w-14 h-60 bg-dark-bg z-[1]">

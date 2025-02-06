@@ -214,8 +214,17 @@ const Home = () => {
                     width = "600px"
                     height = "800px"
                     top = "-120%"
-                    right = "0px"
+                    right="0px"
+                    opacity = "1"
                     image = {Images.RightSide}
+                />
+                <BGGradient
+                    width = "600px"
+                    height = "800px"
+                    top = "-50%"
+                    left = "0px"
+                    opacity = "0.5"
+                    image = {Images.LeftSide}
                 />
                 <section className="relative container mx-auto flex items-center justify-center flex-col gap-3 sm:gap-6 z-[2]">
                     <h1 className="about-us-min-text text-[9rem] custom-sm:text-[12rem] sm:text-[18rem] md:text-[23rem] lg:text-[30rem] sm:-tracking-[1.25rem] font-black opacity-20 sm:opacity-15 absolute top-[-2rem] sm:top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[1]">WIN</h1>
@@ -297,7 +306,23 @@ const Home = () => {
                 </section>
             </section>
 
-            <section className="max-w-screen w-full dark:bg-dark-bg pt-10 pb-5 px-4 md:px-0 z-[1]">
+            <section className="max-w-screen w-full dark:bg-dark-bg pt-10 pb-5 px-4 md:px-0 z-[1] relative">
+                <BGGradient
+                        width = "600px"
+                        height = "800px"
+                        top = "-20%"
+                        right="0px"
+                        opacity = "0.7"
+                        image = {Images.RightSide}
+                    />
+                    <BGGradient
+                        width = "600px"
+                        height = "800px"
+                        top = "20%"
+                        left = "0px"
+                        opacity = "0.5"
+                        image = {Images.LeftSide}
+                    />
                 <section className="relative container mx-auto flex flex-col items-center justify-center">
                     <article>
                         <h1 className="portfolio-min-text opacity-25 sm:opacity-15 leading-[1] text-[9rem] custom-sm:text-[12rem] sm:text-[15rem] md:text-[20rem] xl:text-[24rem] font-black">100+</h1>
@@ -440,7 +465,15 @@ const Home = () => {
                 </div>
             </section>
 
-            <section className="max-w-screen w-full dark:bg-dark-bg py-20 px-4">
+            <section className="max-w-screen w-full dark:bg-dark-bg py-20 px-4 relative z-[1]">
+                <BGGradient
+                    width = "600px"
+                    height = "800px"
+                    top = "-20%"
+                    right="0px"
+                    opacity = "0.7"
+                    image = {Images.RightSide}
+                />
                 <div className="container mx-auto relative z-[2]">
                     <section className="absolute -top-8 custom-sm:-top-12 left-1/2 -translate-x-1/2 -z-[1] max-w-[280px] custom-sm:max-w-[350px] w-full">
                         <img className="opacity-10" src={Images.NetBG} alt="" />
