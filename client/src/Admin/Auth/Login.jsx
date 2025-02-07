@@ -48,7 +48,6 @@ const Login = () => {
                 toast.error(result.message);
             }
         } catch (error) {
-            console.error('Error signing up:', error);
             toast.error('Something went wrong. Please try again.');
         }
     }
@@ -122,6 +121,7 @@ const Login = () => {
                                 </Link>
                             </div>
                             <button
+                                onClick={Login}
                                 type="submit"
                                 className="w-full text-white bg-[#2563eb] hover:bg-[#1d4ed8] focus:ring-4 focus:outline-none focus:ring-[#93c5fd] font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                             >
@@ -131,6 +131,7 @@ const Login = () => {
                     </div>
                 </div>
             </div>
+            <ToastContainer />
         </section>
 
     )

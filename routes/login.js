@@ -35,7 +35,9 @@ const JWT_EXPIRATION_TIME = process.env.JWT_EXPIRATION_TIME;
 
 
 router.post("/", async (req, res) => {
-	const { email, password } = req.body;
+    const { email, password } = req.body;
+    // const hashedPassword = await bcrypt.hash(password, 10);
+    // console.log(hashedPassword);
 
 	try {
         // Check if the email exists in the database
@@ -46,9 +48,8 @@ router.post("/", async (req, res) => {
         if (!Array.isArray(users) || users.length === 0) {
             return res
                 .status(400)
-                .json({ message: "Invalid email or password." });
+                .json({ message: "Invalid email." });
         }
-    
         // Get the user from the database
         const user = users[0];
     
@@ -59,13 +60,16 @@ router.post("/", async (req, res) => {
         if (!isPasswordValid) {
             return res
                 .status(400)
-                .json({ message: "Invalid email or password." });
+                .json({ message: "Invalid password." });
         }
     
         // Generate a JWT token
         const token = jwt.sign({ email: user.email }, JWT_SECRET, {
             expiresIn: JWT_EXPIRATION_TIME,
         });
+
+        // Remove sensitive data before sending response
+        delete user.password; 
     
         // Return success response with the token
         return res
@@ -74,7 +78,7 @@ router.post("/", async (req, res) => {
                 success: true,
                 message: "Login successful.",
                 token,
-                user: user.email,
+                user
             });
     } catch (error) {
         console.error(error);
