@@ -1,58 +1,48 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { Images } from '../../assets/Index';
-import { ToastContainer, toast } from 'react-toastify';
-import config from '../../Config';
+import { ToastContainer } from 'react-toastify';
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import Loader from '../Components/Loader';
+import { useAuth } from '../../Context/AuthContext';
 
 const Login = () => {
-
-    const { SERVER_URL } = config.api;
+    const navigate = useNavigate();
+    const { Login } = useAuth(); //  Get Login function from AuthContext
     const [passwordVisible, setPasswordVisible] = useState(false);
-
-    // State for managing form inputs
+    const [loading, setLoading] = useState(true);
     const [formData, setFormData] = useState({
         email: '',
         password: '',
     });
 
+    useEffect(() => {
+        const token = localStorage.getItem("token");
+        const user = localStorage.getItem("user");
+        if (token && user) {
+            navigate("/admin");
+        }
+        setLoading(false); // Stop loader after checking
+    }, [navigate]);
+
+    if (loading) {
+        return <Loader />; // Show Loader while checking login state
+    }
+
     const handleInputChange = (e) => {
         const { id, value } = e.target;
-        // Update state for other inputs
         setFormData({ ...formData, [id]: value });
     };
 
     const handlePasswordVisible = (e) => {
-        e.preventDefault(); // Prevent default button behavior
-        setPasswordVisible(!passwordVisible); // Toggle visibility state
+        e.preventDefault();
+        setPasswordVisible(!passwordVisible);
     };
 
-    const Login = async (e) => {
-        e.preventDefault(); // Prevent default form submission
-
-        const { email, password } = formData;
-
-        try {
-            const response = await fetch(`${SERVER_URL}/login`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email, password }),
-            });
-
-            const result = await response.json();
-
-            if (response.ok) {
-                console.log(result);
-                toast.success(result.message);
-            } else {
-                toast.error(result.message);
-            }
-        } catch (error) {
-            toast.error('Something went wrong. Please try again.');
-        }
-    }
-
-
+    const handleLogin = (e) => {
+        e.preventDefault();
+        Login(formData.email, formData.password); // Call Login function from AuthContext
+    };
 
     return (
         <section className="bg-gray-50">
@@ -65,16 +55,16 @@ const Login = () => {
                         <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">
                             Sign in to your account
                         </h1>
-                        <form className="space-y-4 md:space-y-6">
+                        <form className="space-y-4 md:space-y-6" onSubmit={handleLogin}>
                             <div>
                                 <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900">
                                     Your email
                                 </label>
                                 <input
                                     type="email"
-                                    name="email"
                                     id="email"
-                                    value={formData.email} onChange={handleInputChange}
+                                    value={formData.email}
+                                    onChange={handleInputChange}
                                     className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-[#93c5fd] focus:border-[#2563eb] block w-full p-2.5"
                                     placeholder="name@company.com"
                                     required
@@ -87,16 +77,16 @@ const Login = () => {
                                 <div className='w-full relative'>
                                     <input
                                         type={passwordVisible ? "text" : "password"}
-                                        name="password"
                                         id="password"
-                                        value={formData.password} onChange={handleInputChange}
+                                        value={formData.password}
+                                        onChange={handleInputChange}
                                         placeholder="••••••••"
                                         className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-[#93c5fd] focus:border-[#2563eb] block w-full p-2.5"
                                         required
                                     />
-                                    <button onClick={(e) => handlePasswordVisible(e)} className='absolute select-none top-1/2 -translate-y-1/2 opacity-50 right-3 pointer'>
-                                            {passwordVisible ? <FaEye /> : <FaEyeSlash />}
-                                        </button>
+                                    <button onClick={handlePasswordVisible} className='absolute select-none top-1/2 -translate-y-1/2 opacity-50 right-3 pointer'>
+                                        {passwordVisible ? <FaEye /> : <FaEyeSlash />}
+                                    </button>
                                 </div>
                             </div>
                             <div className="flex items-center justify-between">
@@ -104,10 +94,8 @@ const Login = () => {
                                     <div className="flex items-center h-5">
                                         <input
                                             id="remember"
-                                            aria-describedby="remember"
                                             type="checkbox"
                                             className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-[#93c5fd]"
-                                            required
                                         />
                                     </div>
                                     <div className="ml-3 text-sm">
@@ -121,7 +109,6 @@ const Login = () => {
                                 </Link>
                             </div>
                             <button
-                                onClick={Login}
                                 type="submit"
                                 className="w-full text-white bg-[#2563eb] hover:bg-[#1d4ed8] focus:ring-4 focus:outline-none focus:ring-[#93c5fd] font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                             >
@@ -133,10 +120,7 @@ const Login = () => {
             </div>
             <ToastContainer />
         </section>
+    );
+};
 
-    )
-}
-
-
-
-export default Login
+export default Login;

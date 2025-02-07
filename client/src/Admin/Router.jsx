@@ -1,13 +1,13 @@
 import { Routes, Route } from "react-router-dom";
 import Login from "./Auth/Login";
-import Dashboard from "./Dashboard";
-import ProtectedRoute from "./ProtectedRoute"; // Ensure this file exists
+import Dashboard from "./Pages/Dashboard";
+import ProtectedRoute from "./ProtectedRoute"; 
 
 const AdminRoutes = () => {
     return (
         <Routes>
-            <Route path="/login" element={<Login />} /> 
-            <Route path="/" element={<Dashboard />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
         </Routes>
     );
 };
