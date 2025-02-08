@@ -1,25 +1,30 @@
 import { RxHome } from "react-icons/rx";
+import { FaBlog } from "react-icons/fa6";
+import { MdOutlinePermMedia } from "react-icons/md";
+import { MdContactPage } from "react-icons/md";
+import { FaCommentAlt } from "react-icons/fa";
+import { BsFillMenuButtonWideFill } from "react-icons/bs";
+import { FaUserCircle } from "react-icons/fa";
+import { IoSettings } from "react-icons/io5";
 
 export const Menu = [
     {
         id: 1,
         name: "Dashboard",
-        link: "",
-        icon: '',
         cat: "heading",
     },
     {
         id: 2,
         name: "Dashboard",
         link: "/admin",
-        icon: '',
+        icon: <RxHome />,
         cat: "menu",
     },
     {
         id: 3,
         name: "Blogs",
         link: "/admin",
-        icon: '',
+        icon: <FaBlog />,
         cat: "menu",
         submenu: [
             {
@@ -48,35 +53,35 @@ export const Menu = [
         id: 4,
         name: "Media",
         link: "/admin",
-        icon: '',
+        icon: <MdOutlinePermMedia />,
         cat: "menu",
     },
     {
         id: 5,
         name: "Pages",
         link: "/admin",
-        icon: '',
+        icon: <MdContactPage />,
         cat: "menu",
     },
     {
         id: 6,
         name: "Comment",
         link: "/admin",
-        icon: '',
+        icon: <FaCommentAlt />,
         cat: "menu",
     },
     {
         id: 7,
         name: "Menu",
         link: "/admin",
-        icon: '',
+        icon: <BsFillMenuButtonWideFill />,
         cat: "menu",
     },
     {
         id: 8,
         name: "Uers",
         link: "/admin",
-        icon: '',
+        icon: <FaUserCircle />,
         cat: "menu",
         submenu: [
             {
@@ -100,7 +105,7 @@ export const Menu = [
         id: 9,
         name: "Setting",
         link: "/admin",
-        icon: '',
+        icon: <IoSettings />,
         cat: "menu",
         submenu: [
             {
