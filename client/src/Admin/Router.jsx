@@ -5,7 +5,7 @@ import ProtectedRoute from "./ProtectedRoute";
 
 const AdminRoutes = () => {
     return (
-        <section id="admin">
+        <section id="admin" className="bg-[#eaedf7] w-screen h-screen overflow-hidden">
             <Routes>
                 <Route path="/login" element={<Login />} />
                 <Route path="/" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
