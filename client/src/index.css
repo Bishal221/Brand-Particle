@@ -219,3 +219,14 @@ a{
 		transform: translateY(20%);
 	}
 }
+
+.scroll-width-none::-webkit-scrollbar{
+	width: 0;
+	margin: 0;
+}
+
+#admin{
+	*{
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	}
+}

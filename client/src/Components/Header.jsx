@@ -111,7 +111,7 @@ const Header = () => {
                 {mainMenu.map((menu, index) => {
                   return (
                     <>
-                      <li key={index}>
+                      <li key={index + 1}>
                         <Link className="dark:text-white dark:hover:text-dark-primary transition-all duration-300 text-4xl md:text-5xl font-semibold" to={menu.path}>
                           {menu.name}
                         </Link>
