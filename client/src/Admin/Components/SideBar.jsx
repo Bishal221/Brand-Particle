@@ -30,9 +30,7 @@ const SideBar = (props) => {
     return (
         <>
             <aside className={`${menushow ? 'w-60 lg:block hidden' : 'w-60 transition-all duration-300 lg:w-20 hover:w-60'} bg-[#0e0e23] h-full group fixed z-[103] transition-all duration-[0.3s] ease-[ease]`}>
-                <section onClick={()=> setMenushow(true)} className='w-full lg:hidden block select-none max-w-[calc(100vw-15rem)] fixed bg-transparent top-0 right-0 h-full'>
-
-                </section>
+                <section onClick={()=> setMenushow(true)} className='w-full lg:hidden block select-none max-w-[calc(100vw-15rem)] fixed bg-transparent top-0 right-0 h-full'></section>
                 <div className={`${menushow ? 'w-60' : 'w-60 lg:w-20 lg:group-hover:w-60'} fixed flex z-[9] items-center justify-center transition-all duration-[0.3s] ease-[ease] px-5 py-5 border-e border-y border-[#ffffff1a]`}>
                     <Link to={'/admin'} className=''>
                         <img src={MainLogo} className={`${menushow ? 'hidden lg:block lg:w-[184px]' : ' lg:hidden group-hover:block'} transition-all duration-[0.05s]`} alt="" />
