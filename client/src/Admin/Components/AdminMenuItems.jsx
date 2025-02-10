@@ -43,7 +43,7 @@ export const Menu = [
                 link: "/admin",
             },
             {
-                id: 3,
+                id: 4,
                 name: "Tags",
                 link: "/admin",
             },

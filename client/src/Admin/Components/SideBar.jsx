@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
-import { Images } from '../../assets/Index';
-import { RxHome } from "react-icons/rx";
 import { Link } from 'react-router-dom';
-import { Menu } from './AdminMenuItems';
+// import { Menu } from './AdminMenuItems';
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
-const SideBar = () => {
+const SideBar = (props) => {
+
+    const { SmallLogo, MainLogo, Menu } = props;
 
     const [currentMenu, setCurrentMenu] = useState(null);
+    const [currentSubMenu, setCurrentSubMenu] = useState(null);
     const [menuActive, setMenuActive] = useState(2);
     const [subMenuActive, setSubMenuActive] = useState(false);
-    const [menushow, setMenushow] = useState(true);
+    const [menushow, setMenushow] = useState(false);
 
     const MenuOpen = (menu) => {
         if (menu.submenu) {
@@ -22,13 +23,18 @@ const SideBar = () => {
         setCurrentMenu(0);
     }
 
+    const SunMenuBtn = (mainMenu, subMenu) => {
+        setMenuActive(mainMenu);
+        setCurrentSubMenu(subMenu.id);
+    }
+
     return (
         <>
             <aside className={`${menushow ? 'w-60' : 'w-20 hover:w-60'} bg-[#0e0e23] h-full group fixed z-[103] transition-all duration-[0.3s] ease-[ease]`}>
                 <div className={`${menushow ? 'w-60' : 'w-20 group-hover:w-60'} fixed flex z-[9] items-center justify-center transition-all duration-[0.3s] ease-[ease] px-5 py-5 border-e border-y border-[#ffffff1a]`}>
                     <Link to={''} className=''>
-                        <img src={Images.BrandWhite} className={`${menushow ? 'w-[184px]' : 'hidden group-hover:block'} transition-all duration-[0.3s]`} alt="" />
-                        <img src={Images.SmallLogoWhite} className={`${menushow ? 'hidden' : 'w-[184px] group-hover:hidden'} transition-all duration-[0.3s]`} alt="" />
+                        <img src={MainLogo} className={`${menushow ? 'w-[184px]' : 'hidden group-hover:block'} transition-all duration-[0.3s]`} alt="" />
+                        <img src={SmallLogo} className={`${menushow ? 'hidden' : 'w-[184px] group-hover:hidden'} transition-all duration-[0.3s]`} alt="" />
                     </Link>
                 </div>
 
@@ -56,8 +62,8 @@ const SideBar = () => {
                                                             {menu.submenu.map((submenu, i) => {
                                                                 return (
                                                                     <>
-                                                                        <li key={menu.id} onClick={() => setMenuActive(menu.id)}>
-                                                                            <Link to={''} className={menushow ? 'py-[0.45rem] pr-[1.6rem] hover:text-white hover:font-medium transition-all duration-300 text-[#fff6] inline-flex items-start' : 'py-[0.45rem] pr-[0.5rem] pl-[0.6rem] hover:text-white hover:font-medium transition-all duration-300 text-[#fff6] inline-flex items-start'}>
+                                                                        <li key={menu.id} onClick={() => SunMenuBtn(menu.id, submenu)}>
+                                                                            <Link to={''} className={`${menushow ? 'py-[0.45rem] pr-[1.6rem] hover:text-white hover:font-medium transition-all duration-300 text-[#fff6] inline-flex items-start' : 'py-[0.45rem] pr-[0.5rem] pl-[0.6rem] hover:text-white hover:font-medium transition-all duration-300 text-[#fff6] inline-flex items-start'} ${currentSubMenu === submenu.id ? 'text-white' : '' }`}>
                                                                                 <span className={menushow ? 'mr-[1rem] mt-[0.15rem]' : 'mt-[0.15rem] group-hover:mr-[1rem]'}><MdKeyboardDoubleArrowRight /></span>
                                                                                 <span className={`text-[0.8rem] ${menushow ? '' : 'hidden group-hover:block'}`}>{submenu.name}</span>
                                                                             </Link>
