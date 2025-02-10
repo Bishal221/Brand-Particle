@@ -4,7 +4,7 @@ import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
 const SideBar = (props) => {
 
-    const { SmallLogo, MainLogo, Menu, menushow } = props;
+    const { SmallLogo, MainLogo, Menu, menushow, setMenushow } = props;
 
     const [currentMenu, setCurrentMenu] = useState(null);
     const [currentSubMenu, setCurrentSubMenu] = useState(null);
@@ -13,7 +13,7 @@ const SideBar = (props) => {
 
     const MenuOpen = (menu) => {
         if (menu.submenu) {
-            setCurrentMenu(menu.id)
+            setCurrentMenu(menu.id);
             setSubMenuActive(true);
             return;
         }
@@ -29,7 +29,10 @@ const SideBar = (props) => {
 
     return (
         <>
-            <aside className={`${menushow ? 'w-60 lg:block hidden' : 'w-60 lg:w-20 hover:w-60'} bg-[#0e0e23] h-full group fixed z-[103] transition-all duration-[0.3s] ease-[ease]`}>
+            <aside className={`${menushow ? 'w-60 lg:block hidden' : 'w-60 transition-all duration-300 lg:w-20 hover:w-60'} bg-[#0e0e23] h-full group fixed z-[103] transition-all duration-[0.3s] ease-[ease]`}>
+                <section onClick={()=> setMenushow(true)} className='w-full lg:hidden block select-none max-w-[calc(100vw-15rem)] fixed bg-transparent top-0 right-0 h-full'>
+
+                </section>
                 <div className={`${menushow ? 'w-60' : 'w-60 lg:w-20 lg:group-hover:w-60'} fixed flex z-[9] items-center justify-center transition-all duration-[0.3s] ease-[ease] px-5 py-5 border-e border-y border-[#ffffff1a]`}>
                     <Link to={'/admin'} className=''>
                         <img src={MainLogo} className={`${menushow ? 'hidden lg:block lg:w-[184px]' : ' lg:hidden group-hover:block'} transition-all duration-[0.05s]`} alt="" />
@@ -62,7 +65,7 @@ const SideBar = (props) => {
                                                                 return (
                                                                     <>
                                                                         <li key={menu.id} onClick={() => SunMenuBtn(menu.id, submenu)}>
-                                                                            <Link to={''} className={`${menushow ? 'py-[0.45rem] pr-[1.6rem] hover:text-white hover:font-medium transition-all duration-300 text-[#fff6] inline-flex items-start' : 'py-[0.45rem] pr-[0.5rem] pl-[0.6rem] hover:text-white hover:font-medium transition-all duration-300 text-[#fff6] inline-flex items-start'} ${currentSubMenu === submenu.id ? 'text-white' : '' }`}>
+                                                                            <Link to={''} className={`${menushow ? 'py-[0.45rem] pr-[1.6rem] hover:text-white hover:font-medium transition-all duration-300 text-[#fff6] inline-flex items-start' : 'py-[0.45rem] pr-[0.5rem] pl-[0.6rem] hover:text-white hover:font-medium transition-all duration-300 text-[#fff6] inline-flex items-start'} ${currentSubMenu === submenu.id ? 'text-white' : ''}`}>
                                                                                 <span className={menushow ? 'mr-[1rem] mt-[0.15rem]' : 'mt-[0.15rem] mr-4 lg:mr-0 group-hover:mr-[1rem]'}><MdKeyboardDoubleArrowRight /></span>
                                                                                 <span className={`text-[0.8rem] ${menushow ? '' : 'block lg:hidden group-hover:block'}`}>{submenu.name}</span>
                                                                             </Link>

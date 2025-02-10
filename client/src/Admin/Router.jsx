@@ -23,9 +23,10 @@ const AdminRoutes = () => {
                 MainLogo={Images.BrandWhite}
                 SmallLogo={Images.SmallLogoWhite}
                 Menu={Menu}
-                menushow={ menushow }
+                menushow={menushow}
+                setMenushow = {setMenushow}
             />
-            <section className={`${ menushow ? 'ml-[15rem]' : 'ml-[5rem]'} min-h-[calc(100vh_-_7.5rem)] transition-all duration-[0.05s] ease-[ease] mt-[4rem] px-[0.8rem]`}>
+            <section className={`${ menushow ? 'lg:ml-[15rem]' : 'lg:ml-[5rem]'} min-h-[calc(100vh_-_7.5rem)] transition-all duration-[0.05s] ease-[ease] mt-[4rem] px-[0.8rem]`}>
                 <Routes>
                     <Route path="/login" element={<Login />} />
                     <Route path="/" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
